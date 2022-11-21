@@ -1,0 +1,40 @@
+
+header {
+    padding: 5rem 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: sticky;
+    height: 70px;
+    box-shadow: var(--box-shadow);
+    top: 0;
+    border: 1px solid;
+}
+
+.brand-logo h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.navigation {
+    border: 1px solid;
+    width: 500px;
+    display: flex;
+}
+.navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: spa;
+    width: 300px;
+}
+
+.navigation ul li {
+    list-style: none;
+}
+
+
+
