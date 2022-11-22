@@ -1,40 +1,47 @@
-
-header {
-    padding: 5rem 10%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.navbar {
     display: flex;
-    align-items: center;
+    padding: 0 99px;
     justify-content: space-between;
+    align-items: center;
+    height: 75px;
     background-color: #fff;
     position: sticky;
-    height: 70px;
+    top: 0; left: 0; right: 0;
     box-shadow: var(--box-shadow);
-    top: 0;
-    border: 1px solid;
 }
 
-.brand-logo h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
+.brand-logo img{
+    width: 100px;
 }
 
-.navigation {
-    border: 1px solid;
-    width: 500px;
+.nav-links {
     display: flex;
-}
-.navigation ul {
-    display: flex;
-    align-items: center;
-    justify-content: spa;
-    width: 300px;
-}
-
-.navigation ul li {
+    justify-content: flex-end;
+    width: 75%;
     list-style: none;
 }
 
+.link-item {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+.link-item a{
+    text-decoration: none;
+}
 
 
+
+.btn-login {
+    min-width: 108px;
+    height: 44px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.mobile-menu-icon {
+    display: none;
+}

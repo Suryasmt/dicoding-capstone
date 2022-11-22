@@ -1,13 +1,26 @@
-import './App.css';
+import React from 'react';
+import Navigation from './components/Navigation';
+import {Routes, Route } from 'react-router-dom';
+import KalkulatorPage from './pages/KalkulatorPage';
+import ForumPage from './pages/ForumPage';
+import ArtikelPage from './pages/ArtikelPage';
+import AboutUsPage from './pages/AboutUsPage';
+import HomePage from './pages/HomePage';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Team Capstone</h1>
-      </header>
-    </div>
-  );
+    <>
+        <Navigation />
+        <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/kalkulator' element={<KalkulatorPage />} />
+            <Route path='/forum' element={<ForumPage />} />
+            <Route path='/artikel' element={<ArtikelPage />} />
+            <Route path='/about' element={<AboutUsPage />} />
+        </Routes>
+    </>
+  )
 }
 
 export default App;
