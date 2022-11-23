@@ -6,6 +6,7 @@ import ForumPage from './pages/ForumPage';
 import ArtikelPage from './pages/ArtikelPage';
 import AboutUsPage from './pages/AboutUsPage';
 import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/artikel" element={<ArtikelPage />} />
         <Route path="/about" element={<AboutUsPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

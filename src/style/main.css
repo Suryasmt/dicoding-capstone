@@ -2,6 +2,8 @@
 
 @import './component/_navigation.css';
 @import './pages/_home.css';
+@import './component/footer.css';
+
 
 @import './_responsive.css';
 

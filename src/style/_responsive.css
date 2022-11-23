@@ -1,3 +1,19 @@
+@media only screen and (max-width: 1200px) {
+    /* footer */
+    #footer .footer {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* footer */
+    #footer .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
 @media screen and (max-width: 986px) {
     .navbar{
         justify-content: flex-start;
