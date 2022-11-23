@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dosis:wght@200;300;400;500;600&family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400&display=swap');
 
 @import './component/_navigation.css';
+
+@import './pages/_about.css';
 @import './pages/_home.css';
 @import './component/footer.css';
 
@@ -19,13 +21,13 @@
     --secondary: #FFF0F3;
     --black:#222;
     --white:#fff;
-    --yellow: rgb(255, 255, 20);
-    --light-black:#666;
+    --grey:#7A7A7A;
     --light-white:#ccc;
     --light-bg:#f4f4fe;
     --dark-bg:rgba(0,0,0,.7);
     --border:1rem solid #aaa;
     --box-shadow:0 4px 8px 0 rgba(0,0,0,.1);
+    --focus: rgb(230, 230, 49);
   }
 
 body, html {
@@ -35,7 +37,7 @@ body, html {
 }
 
 html::-webkit-scrollbar{
-    width: 0.7rem;
+    width: 0.6rem;
 }
   
 html::-webkit-scrollbar-track{

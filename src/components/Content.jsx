@@ -6,7 +6,6 @@ import gallery1 from '../assets/Image 1.jpg'
 import gallery2 from '../assets/Image 2.jpg'
 import gallery3 from '../assets/Image 3.jpg'
 
-
 const Content = () => {
   return (
     <>
