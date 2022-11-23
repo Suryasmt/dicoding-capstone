@@ -1,22 +1,23 @@
 .box-item {
-    height: 160px;
     display: flex;
     background: #FFF0F3;
     justify-content: space-evenly;
 }
 
-.item-motto__text{
-    margin: auto;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-    width: 500px;
+.item-motto {
+    margin: 40px auto;
+    width: 40%;
 }
 
-.item-fitur__icon {
+.item-motto p{
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+.item-fitur {
     text-align: center;
     font-size: 50px;
-    margin: auto 0;
+    margin: 40px 0;
 }
 
 .item-fitur__title {
