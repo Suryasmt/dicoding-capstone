@@ -38,16 +38,25 @@
         margin-right: 30px;
         cursor: pointer;
     }
-    .content-info {
+    .content-info, 
+    .about {
         grid-template-columns: 1fr;
     }
-    .content-info__inner{
+    .content-info__inner {
         margin: 0px 0px 40px 0;
     }
-    .content-info{
+    .content-info {
         gap: 0;
     }
+
+    .about-image img {
+        width: 80%;
+    }
     
+    .about-text {
+        width: 80%;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
