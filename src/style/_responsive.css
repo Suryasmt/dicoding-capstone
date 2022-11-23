@@ -38,7 +38,17 @@
         margin-right: 30px;
         cursor: pointer;
     }
+    .content-info {
+        grid-template-columns: 1fr;
+    }
+    .content-info__inner{
+        margin: 0px 0px 40px 0;
+    }
+    .content-info{
+        gap: 0;
+    }
     
 }
+
 
 
