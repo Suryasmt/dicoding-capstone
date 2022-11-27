@@ -3,21 +3,20 @@ import Article from "../components/Article";
 import axios from "axios";
 
 function ArtikelPage() {
-  const [post, setPost] = useState([]);
+  const [article, setArticle] = useState([]);
   const API =
     "https://data-base-article-default-rtdb.firebaseio.com/data-article/-NHnu7_0z809hEDcshST.json";
 
   useEffect(() => {
     axios.get(API).then((result) => {
-      setPost(result.data);
+      setArticle(result.data);
     });
-  }, [setPost]);
-  console.log(post);
+  }, [setArticle]);
 
   return (
     <div className="box-content">
       <h1>ArtikelPage</h1>
-      {post.map((post) => {
+      {article.map((post) => {
         return (
           <Article
             images={''}

@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCalculator } from 'react-icons/fa';
 import { RiDiscussFill } from 'react-icons/ri';
 import { BsBookFill } from 'react-icons/bs';
-import gallery1 from '../assets/Image 1.jpg'
-import gallery2 from '../assets/Image 2.jpg'
-import gallery3 from '../assets/Image 3.jpg'
+import gallery1 from '../../assets/Image 1.jpg'
+import gallery2 from '../../assets/Image 2.jpg'
+import gallery3 from '../../assets/Image 3.jpg'
+import Article from '../Article';
+import axios from 'axios';
 
 const Content = () => {
+  const [article, setArticle] = useState([]);
+  const API =
+    "https://data-base-article-default-rtdb.firebaseio.com/data-article/-NHnu7_0z809hEDcshST.json";
+
+    useEffect(() => {
+      axios.get(API).then((result) => {
+        setArticle(result.data);
+      });
+    }, [setArticle]);
+    const setPopular = article.filter((postFilter) => {
+      return postFilter.popular === 'true'
+    })
+    // console.log(setPopular);
   return (
     <>
       <div className='box-item'>
@@ -51,6 +66,16 @@ const Content = () => {
       </div>
       <div className='box-content'>
         <h1 className='article__title'>Artikel Terkait</h1>
+        {
+          setPopular.map(popular => {
+            return <Article 
+            images={''}  
+            title={popular.title}
+            desc={popular.description}
+            url={popular.url}
+            />
+          })
+        }
       </div>
     </>
   )
