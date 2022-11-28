@@ -47,3 +47,9 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background-color: #FF758F;
 }
+
+.loading-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
+}
