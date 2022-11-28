@@ -64,8 +64,9 @@ const Content = () => {
                 </p>
             </span>
       </div>
-      <div className='box-content'>
-        <h1 className='article__title'>Artikel Terkait</h1>
+      <section id='artikel2'>
+        <h2 className='artikel-judul'>Artikel Terkait</h2>
+        <div className='artikel-listCard'>
         {
           setPopular.map(popular => {
             return <Article 
@@ -76,7 +77,8 @@ const Content = () => {
             />
           })
         }
-      </div>
+        </div>
+      </section>
     </>
   )
 }

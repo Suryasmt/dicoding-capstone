@@ -88,6 +88,45 @@
     .item-motto p{
         font-size: 1em;
     }
+    /* artikel2 */
+    #artikel2 .artikel-listCard {
+        display: block;
+    }
+    #artikel2 .artikel-card {
+        margin-bottom: 25px;
+    }
+    #artikel2 .artikel-learn-more {
+        font-size: 16px;
+    }
+    #artikel2 .artikel-judul2 {
+        font-size: 18px;
+    }
+    #artikel2 .artikel-judul {
+        font-size: 36px;
+    }
+    #artikel2 .artikel-learn-more {
+        font-size: 16px;
+    }
+    #artikel2 .artikel-text2 {
+        font-size: 14px;
+    }
 }
 
+@media (max-width: 998px) {
+    /* artikel2 */
+    #artikel2 .artikel-listCard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 560px) {
+    /* artikel2 */
+    #artikel2 .artikel-listCard {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    #artikel2 .artikel-learn-more {
+        width: 8em;
+        height: 38px;
+    }
+}

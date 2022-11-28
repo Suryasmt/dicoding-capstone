@@ -14,8 +14,9 @@ function ArtikelPage() {
   }, [setArticle]);
 
   return (
-    <div className="box-content">
-      <h1>ArtikelPage</h1>
+    <section id='artikel2'>
+      <h2 className='artikel-judul'>Artikel Terkait</h2>
+      <div className='artikel-listCard'>
       {article.map((post) => {
         return (
           <Article
@@ -26,7 +27,8 @@ function ArtikelPage() {
           />
         );
       })}
-    </div>
+      </div>
+    </section>
   );
 }
 

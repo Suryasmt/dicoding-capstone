@@ -5,6 +5,7 @@
 @import './pages/_about.css';
 @import './pages/_home.css';
 @import './components/footer.css';
+@import './components/artikel.css';
 
 
 @import './_responsive.css';
