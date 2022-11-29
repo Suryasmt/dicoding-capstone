@@ -23,8 +23,13 @@ body {
 }
 
 #artikel2 .artikel-gbr {
-    width: 100%;
+    height: 190px;
+    overflow: hidden;
     border-radius: 10px 10px 0 0;
+}
+
+#artikel2 .artikel-gbr img{
+    width: 100%;
 }
 
 #artikel2 .artikel-card {
@@ -80,15 +85,15 @@ body {
 
 #artikel2 .artikel-learn-more {
     background-color: white;
-    height: 39px;
-    padding: 5px;
+    height: 44px;
+    padding: 7px;
     border: solid 2px;
     border-color: #FF758F;
     border-radius: 100px;
     margin-bottom: 18px;
     display: flex;
     justify-content: center;
-    width: 8rem;
+    width: 9rem;
 
     font-size: 18px;
     font-style: normal;

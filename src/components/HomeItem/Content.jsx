@@ -70,7 +70,7 @@ const Content = () => {
         {
           setPopular.map(popular => {
             return <Article 
-            images={''}  
+              images={popular.image}
             title={popular.title}
             desc={popular.description}
             url={popular.url}

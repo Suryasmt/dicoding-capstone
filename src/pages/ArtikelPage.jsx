@@ -20,7 +20,7 @@ function ArtikelPage() {
       {article.map((post) => {
         return (
           <Article
-            images={''}
+            images={post.image}
             title={post.title}
             desc={post.description}
             url={post.url}

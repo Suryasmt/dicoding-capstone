@@ -5,7 +5,9 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const Article = (props) => {
   return (
     <div className="artikel-card">
-      <img className="artikel-gbr" src={props.images} alt={props.alt} />
+      <div className="artikel-gbr">
+        <img className="" src={props.images} alt={props.alt} />
+      </div>
       <header className='artikel-card_header'>
         <div className="">
           <h3 className="artikel-judul2">{props.title}</h3>
