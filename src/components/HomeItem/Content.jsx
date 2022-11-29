@@ -17,7 +17,7 @@ const Content = () => {
       axios.get(API).then((result) => {
         setArticle(result.data);
       });
-    }, [setArticle]);
+    }, []);
     const setPopular = article.filter((postFilter) => {
       return postFilter.popular === 'true'
     })
