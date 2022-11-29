@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
-import ButtonLogin from './ButtonLogin';
 import BrandLogo from '../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu } from "@react-icons/all-files/fi/FiMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import { UserAuth } from "../config/authContext";
 
 const Navigation = () => {
   const [isMobile, setMobile] = useState(false);
+
+  const { user, logOut } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <nav className='navbar'>
@@ -40,8 +52,20 @@ const Navigation = () => {
             About
           </Link>
         </li>
-        <ButtonLogin name='Masuk'/>
       </ul>
+      {user?.email ? (
+          <div className="login">
+            <button onClick={handleLogout} className="btn-login">
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="login">
+            <Link to="/login">
+              <button className="btn-login">Masuk</button>
+            </Link>
+          </div>
+        )}
       <button className='mobile-menu-icon'
         onClick={() => 
         setMobile(!isMobile)

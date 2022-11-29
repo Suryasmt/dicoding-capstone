@@ -5,6 +5,7 @@
 @import './pages/_about.css';
 @import './pages/_home.css';
 @import './components/footer.css';
+@import './components/artikel.css';
 
 
 @import './_responsive.css';
@@ -46,4 +47,10 @@ html::-webkit-scrollbar-track{
   
 html::-webkit-scrollbar-thumb{
     background-color: #FF758F;
+}
+
+.loading-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
 }

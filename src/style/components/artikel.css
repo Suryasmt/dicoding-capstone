@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+
+#artikel2 .center {
+    display: flex;
+    justify-content: center;
+}
+
+#artikel2 .artikel-listCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(min-content, max-content);
+    gap: 25px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#artikel2 .artikel-gbr {
+    height: 190px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+#artikel2 .artikel-gbr img{
+    width: 100%;
+}
+
+#artikel2 .artikel-card {
+    border: solid 1px #C4C4C4;
+    border-radius: 10px;
+}
+
+#artikel2 .artikel-card_header {
+    padding: 20px;
+}
+
+#artikel2 .artikel-judul2 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FF758F;
+}
+
+#artikel2 .artikel-text2 {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #7A7A7A;
+
+    /* batasi tulisa */
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+#artikel2 .artikel-judul {
+    margin-bottom: 84px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: center;
+    color: #FF758F;
+}
+
+#artikel2 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#artikel2 .artikel-learn-more {
+    background-color: white;
+    height: 44px;
+    padding: 7px;
+    border: solid 2px;
+    border-color: #FF758F;
+    border-radius: 100px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    width: 9rem;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: #FF758F;
+}
