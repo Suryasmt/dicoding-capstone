@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dosis:wght@200;300;400;500;600&family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400&display=swap');
 
-@import './components/_navigation.css';
+@import './components/navigation.css';
 
 @import './pages/_about.css';
 @import './pages/_home.css';
+@import './pages/login.css';
+
 @import './components/footer.css';
 @import './components/artikel.css';
 

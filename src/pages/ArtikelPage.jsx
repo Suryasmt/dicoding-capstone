@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Article from "../components/Article";
 import axios from "axios";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 function ArtikelPage() {
   const [article, setArticle] = useState([]);
@@ -14,21 +16,25 @@ function ArtikelPage() {
   }, [setArticle]);
 
   return (
-    <section id='artikel2'>
-      <h2 className='artikel-judul'>Artikel Terkait</h2>
-      <div className='artikel-listCard'>
-      {article.map((post) => {
-        return (
-          <Article
-            images={post.image}
-            title={post.title}
-            desc={post.description}
-            url={post.url}
-          />
-        );
-      })}
-      </div>
-    </section>
+    <>
+      <Navigation />
+      <section id="artikel2">
+        <h2 className="artikel-judul">Artikel Terkait</h2>
+        <div className="artikel-listCard">
+          {article.map((article) => {
+            return (
+              <Article
+                images={article.image}
+                title={article.title}
+                desc={article.description}
+                url={article.url}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 }
 
