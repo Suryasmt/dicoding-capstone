@@ -1,93 +1,153 @@
 @media only screen and (max-width: 1200px) {
-    /* footer */
-    #footer .footer {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
+  /* footer */
+  #footer .footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-    /* footer */
-    #footer .footer {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+  /* footer */
+  #footer .footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Kalkulator Result */
+  .kalkulator-result {
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 986px) {
-    .navbar{
-        justify-content: flex-start;
-        padding: 0;
-    }
-    .brand-logo{
-        margin-left: 44px;
-    }
-    .nav-links {
-        display: none;
-    }
-    .nav-links-mobile {
-        position: absolute;
-        display: block;
-        list-style: none;
-        background-color: #fff;
-        left: 0;
-        top: 75px;
-        transition: all 0.5s ease-out;
-        width: 100%;
-    }
-    .link-item {
-        text-align: center;
-        padding: 32px;
-        width: 100%;
-        transition: all 0.5s ease;
-    }
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        font-size: 40px;
-        background-color: #fff;
-        color: black;
-        border: none;
-        outline: none;
-        top: 15px;
-        right: 25px;
-        margin-right: 30px;
-        cursor: pointer;
-    }
-    .content-info, 
-    .about {
-        grid-template-columns: 1fr;
-    }
-    .content-info__inner {
-        margin: 0px 0px 40px 0;
-    }
-    .content-info {
-        gap: 0;
-    }
+  .navbar {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .brand-logo {
+    margin-left: 44px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: #fff;
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+  .link-item {
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .content-info,
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .content-info__inner {
+    margin: 0px 0px 40px 0;
+  }
+  .content-info {
+    gap: 0;
+  }
 
-    .about-image img {
-        width: 80%;
-    }
-    
-    .about-text {
-        width: 80%;
-        text-align: center;
-    }
+  .about-image img {
+    width: 80%;
+  }
+
+  .about-text {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .box-item {
-        flex-direction: column;
-    }
-    .item-fitur {
-        margin-top: 50px;
-    }
-    .item-motto {
-        width: 60%;
-    }
-    .item-motto p{
-        font-size: 1em;
-    }
+  .box-item {
+    flex-direction: column;
+  }
+  .item-fitur {
+    margin-top: 50px;
+  }
+  .item-motto {
+    width: 60%;
+  }
+  .item-motto p {
+    font-size: 1em;
+  }
+  /* artikel2 */
+  #artikel2 .artikel-listCard {
+    display: block;
+  }
+  #artikel2 .artikel-card {
+    margin-bottom: 25px;
+  }
+  #artikel2 .artikel-learn-more {
+    font-size: 16px;
+  }
+  #artikel2 .artikel-judul2 {
+    font-size: 18px;
+  }
+  #artikel2 .artikel-judul {
+    font-size: 36px;
+  }
+  #artikel2 .artikel-learn-more {
+    font-size: 16px;
+  }
+  #artikel2 .artikel-text2 {
+    font-size: 14px;
+  }
 }
 
+@media (max-width: 998px) {
+  /* artikel2 */
+  #artikel2 .artikel-listCard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 560px) {
+  /* artikel2 */
+  #artikel2 .artikel-listCard {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  #artikel2 .artikel-learn-more {
+    width: 8em;
+    height: 38px;
+  }
+
+  .kalkulator-result img {
+    width: 100%;
+  }
+
+  .kalkulator-result h4 {
+    font-size: 20px;
+    color: #ff758f;
+    font-weight: bold;
+  }
+
+  .kalkulator-result__moment {
+    font-size: 20px;
+    color: #ff758f;
+    font-weight: bold;
+  }
+}
