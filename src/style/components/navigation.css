@@ -1,9 +1,9 @@
-.navbar {
+.navigationBar {
     display: flex;
     padding: 0 99px;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    min-height: 75px;
     background-color: #fff;
     position: sticky;
     top: 0; left: 0; right: 0;
@@ -14,23 +14,22 @@
     width: 100px;
 }
 
-.nav-links {
+.navbar-links {
     display: flex;
     justify-content: flex-end;
     width: 75%;
     list-style: none;
+    margin: 0px
 }
 
-.link-item {
+.navbar-link__item {
     padding: 10px 20px;
     margin: 0 10px;
 }
 
-.link-item a{
+.navbar-link__item a{
     text-decoration: none;
 }
-
-
 
 .btn-login {
     min-width: 108px;

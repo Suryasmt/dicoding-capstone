@@ -6,8 +6,8 @@ import ForumPage from './pages/ForumPage';
 import ArtikelPage from './pages/ArtikelPage';
 import AboutUsPage from './pages/AboutUsPage';
 import HomePage from './pages/HomePage';
-import Footer from './components/Footer';
-import { AuthContextProvider } from './config/authContext';
+import LoginPage from './pages/Authentication/LoginPage';
+import RegisterPage from './pages/Authentication/RegisterPage';
 
 // import Spinner from 'react-bootstrap/Spinner';
 
@@ -47,20 +47,19 @@ const App = () => {
   // }
 
   return (
-    <AuthContextProvider>
-      <Navigation />
+    <>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kalkulator" element={<KalkulatorPage />} />
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/artikel" element={<ArtikelPage />} />
-        <Route path="/forgot" element={<AboutUsPage />} />
-        <Route path="/register" element={<AboutUsPage />} />
-        <Route path="/login" element={<AboutUsPage />} />
+        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
-      <Footer />
-      </AuthContextProvider>
+    </>
+
   );
 }
 
