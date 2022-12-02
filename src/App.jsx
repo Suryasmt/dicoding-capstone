@@ -1,6 +1,5 @@
 // import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
 import KalkulatorPage from './pages/KalkulatorPage';
 import ForumPage from './pages/ForumPage';
 import ArtikelPage from './pages/ArtikelPage';

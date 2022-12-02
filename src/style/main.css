@@ -4,7 +4,7 @@
 
 @import './pages/_about.css';
 @import './pages/_home.css';
-@import './pages/_login.css';
+@import './pages/_authentication.css';
 
 @import './components/footer.css';
 @import './components/artikel.css';
