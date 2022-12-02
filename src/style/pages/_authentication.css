@@ -1,0 +1,187 @@
+.container-login, 
+.container-register {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.back-to-home a,
+.register-back-to-home a{
+    display: flex;
+    margin-left: 20px;
+    min-height: 45px ;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--black);
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.back-to-home .icon-home,
+.register-back-to-home .icon-home {
+    height: 100%;
+    width: 25px;
+}
+
+.back-to-home a :hover{
+    border: 1px solid #eeeeee;
+    box-shadow: var(--box-shadow);
+}
+
+.register-back-to-home a:hover{
+    border: 1px solid #eeeeee;
+    box-shadow: var(--box-shadow);
+}
+
+.container-login p,
+.container-register p {
+    margin-bottom: 0;
+}
+
+.form-login, .form-register {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
+
+.item-logo {
+    width: 100px;
+    margin: 30px auto 40px auto;
+}
+.item-logo img{
+    width: 100%;
+}
+
+.form-login .login-title,
+.form-register .register-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-login form,
+.form-register form {
+    display: flex;
+    flex-direction: column;
+}
+.form-login .form-group,
+.form-register .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.form-login input,
+.form-register input{
+    padding: 0 10px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #ADB5BD;
+} 
+
+.btn-login-email,
+.btn-register-email {
+    margin: 10px 0;
+    min-height: 50px;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.login-google {
+    min-height: 50px;
+    background-color: var(--white);
+}
+.login-google:hover {
+    background-color: #f1f1f1d2;
+    cursor: pointer;
+}
+.login-google:active{
+    background-color: #e6e5e5bd;
+
+}
+
+.icon-google {
+    height: 100%;
+    min-width: 30px;
+}
+
+.to-register a {
+    color: var(--primary);
+}
+
+.hero-login, 
+.hero-register {
+    display: none;
+}
+
+@media screen and (min-width: 986px) {
+/* Login Page */
+    .container-login {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'to-home to-home'
+        'form-login hero-login';
+        align-items: center;
+    }
+
+    .back-to-home {
+        grid-area: to-home;
+    }
+
+    .form-login {
+        grid-area: form-login;
+    }
+
+    .hero-login {
+        grid-area: hero-login;
+        height: 90%;
+        margin: auto;
+        display: flex;
+
+    }
+    .hero-login img{
+        width: 90%;
+        margin: auto;
+    }
+
+/* Register Page */
+    .container-register {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'register-to-home register-to-home'
+        'hero-register form-register'
+        ;
+        align-items: center;
+    }
+     .register-back-to-home {
+        grid-area: register-to-home;
+    }
+    .hero-register {
+        grid-area: hero-register;
+        height: 90%;
+        margin: auto;
+        display: flex;
+    }
+
+    .hero-register img{
+        width: 90%;
+        margin: auto;
+    }
+
+
+    .form-register {
+        grid-area: form-register;
+    }
+}
