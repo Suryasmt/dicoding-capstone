@@ -1,16 +1,17 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
+import { getAuth } from "firebase/auth";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAVv8Mk1lJBdCJ7bVkiHrND6U8kTUdm7iw",
-  authDomain: "capstone-authentication-8db99.firebaseapp.com",
-  projectId: "capstone-authentication-8db99",
-  storageBucket: "capstone-authentication-8db99.appspot.com",
-  messagingSenderId: "768156469255",
-  appId: "1:768156469255:web:f805300061f761911d42a2"
+  apiKey: "AIzaSyAVQnz1YNp4YmULTGZ7sl54Ji6bUf0rI9Q",
+  authDomain: "capstone-project-b74f1.firebaseapp.com",
+  projectId: "capstone-project-b74f1",
+  storageBucket: "capstone-project-b74f1.appspot.com",
+  messagingSenderId: "340644203702",
+  appId: "1:340644203702:web:c2f46489e49535a5356a17"
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app)

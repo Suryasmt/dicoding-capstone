@@ -19,43 +19,6 @@
 }
 
 @media screen and (max-width: 986px) {
-    .navigationBar{
-        justify-content: flex-start;
-        padding: 0;
-    }
-    .brand-logo{
-        margin-left: 44px;
-    }
-    .navbar-links {
-        display: none;
-    }
-    .navbar-links__mobile {
-        position: absolute;
-        display: block;
-        list-style: none;
-        background-color: #fff;
-        left: 0;
-        top: 75px;
-        transition: all 0.5s ease-out;
-        width: 100%;
-    }
-    .navbar-link__item {
-        text-align: center;
-        padding: 32px;
-        width: 100%;
-    }
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        font-size: 40px;
-        background-color: #fff;
-        color: black;
-        border: none;
-        outline: none;
-        right: 25px;
-        margin-right: 30px;
-        cursor: pointer;
-    }
     .content-info, 
     .about {
         grid-template-columns: 1fr;

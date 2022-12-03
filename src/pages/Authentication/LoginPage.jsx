@@ -1,11 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
 import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
 import { Link } from "react-router-dom";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const [errorSignIn, setErrorSignIn] = useState(false);
+  const navigate = useNavigate();
+
+  const handleEmailPasswordLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        localStorage.setItem("user", JSON.stringify(result.user));
+        navigate("/");
+      })
+      .catch((err) => {
+        console.error(err);
+        setErrorSignIn(true);
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.info(result.user);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        navigate("/");
+      })
+      .catch((err) => {
+        console.info(err);
+      });
+  };
+
+  
+  useEffect(()=>{
+    let user = localStorage.getItem("user")
+    if (user) {
+      return navigate("/")
+    }
+  },[navigate])
+
   return (
     <div className="container-login">
       <div className="back-to-home">
@@ -20,15 +67,30 @@ const LoginPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="login-title">Masuk</h1>
-        <form>
+        <form onSubmit={handleEmailPasswordLogin}>
           <div className="form-group">
-            <label className="mb-2" htmlFor="email">Email</label>
-            <input type="text" placeholder="Masukan Email" />
+            <label className="mb-2" htmlFor="email">
+              Email
+            </label>
+            <input type="email" id="email" placeholder="Masukan Email" />
           </div>
           <div className="form-group">
-            <label className="mb-2" htmlFor="password">Password</label>
-            <input type="password" placeholder="Masukan Password" />
+            <label className="mb-2" htmlFor="password">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Masukan Password"
+            />
           </div>
+          {errorSignIn ? (
+            <p style={{ color: "red", margin: "auto" }}>
+              Email atau password salah
+            </p>
+          ) : (
+            " "
+          )}
           <button className="btn-login-email">Masuk</button>
           <div className="d-flex px-0">
             <div className="col-5 px-0">
@@ -41,7 +103,10 @@ const LoginPage = () => {
               <hr />
             </div>
           </div>
-          <div className="d-flex align-items-center justify-content-center gap-4 login-google shadow mb-3">
+          <div
+            onClick={handleGoogleLogin}
+            className="d-flex align-items-center justify-content-center gap-4 login-google shadow mb-3"
+          >
             <FcGoogle className="icon-google" />
             <p>Masuk dengan Google</p>
           </div>

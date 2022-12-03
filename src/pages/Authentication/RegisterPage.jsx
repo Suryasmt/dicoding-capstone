@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
 import { FcGoogle } from "@react-icons/all-files/fc/FcGoogle";
 import { Link } from "react-router-dom";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+  const [alredyEmail, setAlredyEmail] = useState(false)
+
+
+  const navigate = useNavigate();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        localStorage.setItem("user", JSON.stringify(result.user));
+        console.log(result.user)
+        navigate('/login')
+      })
+      .catch((err) => {
+        console.error(err);
+        setAlredyEmail(true)
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.info(result.user);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        navigate("/");
+      })
+      .catch((err) => {
+        console.info(err);
+      });
+  };
+
   return (
     <div className="container-register">
       <div className="register-back-to-home">
@@ -24,14 +66,22 @@ const RegisterPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="register-title">Daftar</h1>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className="form-group">
-            <label className="mb-2" htmlFor="email">Email</label>
-            <input type="text" placeholder="Masukan Email" />
+            <label className="mb-2" htmlFor="email">
+              Email {alredyEmail ? (<p style={{color:'red'}}>*Email sudah digunakan</p>) : ('')}
+            </label>
+            <input type="email" id="email" placeholder="Masukan Email" />
           </div>
           <div className="form-group">
-            <label className="mb-2" htmlFor="password">Password</label>
-            <input type="password" placeholder="Masukan Password" />
+            <label className="mb-2" htmlFor="password">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Masukan Password"
+            />
           </div>
           <button className="btn-register-email">Daftar</button>
           <div className="d-flex px-0">
@@ -45,7 +95,10 @@ const RegisterPage = () => {
               <hr />
             </div>
           </div>
-          <div className="login-google d-flex align-items-center justify-content-center gap-4 shadow mb-3">
+          <div
+            onClick={handleGoogleLogin}
+            className="login-google d-flex align-items-center justify-content-center gap-4 shadow mb-3"
+          >
             <FcGoogle className="icon-google" />
             <p>Masuk dengan Google</p>
           </div>
