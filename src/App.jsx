@@ -8,6 +8,9 @@ import AboutUsPage from './pages/AboutUsPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/Authentication/LoginPage';
 import RegisterPage from './pages/Authentication/RegisterPage';
+import TRIMESTER_SATU from './pages/KehamilanPage/trimester1'
+import TRIMESTER_DUA from './pages/KehamilanPage/trimester2'
+import TRIMESTER_TIGA from './pages/KehamilanPage/trimester3'
 
 // import Spinner from 'react-bootstrap/Spinner';
 
@@ -56,6 +59,9 @@ const App = () => {
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/trimester1" element={<TRIMESTER_SATU />} />
+        <Route path="/trimester2" element={<TRIMESTER_DUA />} />
+        <Route path="/trimester3" element={<TRIMESTER_TIGA />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </>

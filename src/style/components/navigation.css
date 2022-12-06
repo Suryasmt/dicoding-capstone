@@ -27,6 +27,10 @@
     margin: 0 10px;
 }
 
+.navbar-link__item ul li a{
+    color: pink;
+}
+
 .navbar-link__item a{
     text-decoration: none;
 }

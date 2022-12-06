@@ -3,6 +3,7 @@ import BrandLogo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { FiMenu } from "@react-icons/all-files/fi/FiMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigation = () => {
   const [isMobile, setMobile] = useState(false);
@@ -20,18 +21,15 @@ const Navigation = () => {
           </Link>
         </li>
         <li className='navbar-link__item'>
-          <Link to='/kalkulator'>
-            Kalkulator
-          </Link>
+        <NavDropdown title="Kehamilan"  id="basic-nav-dropdown">
+              <NavDropdown.Item href="/trimester1">Trimester 1</NavDropdown.Item>
+              <NavDropdown.Item href="/trimester2">Trimester 2</NavDropdown.Item>
+              <NavDropdown.Item href="/trimester3">Trimester 3</NavDropdown.Item>
+            </NavDropdown>
         </li>
         <li className='navbar-link__item'>
           <Link to='/forum'>
             Forum
-          </Link>
-        </li>
-        <li className='navbar-link__item'>
-          <Link to='/artikel'>
-            Artikel
           </Link>
         </li>
         <li className='navbar-link__item'>
