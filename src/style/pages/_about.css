@@ -1,33 +1,85 @@
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 105px 0;
-    gap: 69px;
+
+
+/* dibuat gigs */
+.about-text__title {
+    text-align: center;
+    margin: 50px;
+    color: var(--primary);
+    font-weight: bold;
 }
 
-.about-image {
-    width: 100%;
+.container-about-us {
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    margin-top: 50px;
     text-align: center;
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.about-text {
+.about-sp {
+    width: 70%;
     margin: auto;
 }
-.about-text__title {
-    color: var(--primary);
-    margin-bottom: 15px;
+.about-sp h2 {
+    color: pink;
     font-weight: bold;
-    font-size: 42px;
-    font-family: 'DM Sans', sans-serif;
+    text-align: center;
 }
 
-.about-text__decs {
-    color: var(--grey);
-    font-size: 16px;
-    font-family: 'DM Sans', sans-serif;
+.our-team-text {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px
+}
+
+.our-team-text h2 {
+    text-align: center;
+    color: pink;
+    font-weight: bold;
+}
+
+.card-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    width: 90%;
+    margin: auto;
+}
+.card-about-us {
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(230, 70, 137, 0.384);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+.user-card {
+    justify-content: center;
+    display: flex;
+}
+
+.user-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.box-content-about {
+    width: 100%;
+    margin: auto;
+}
+
+.desc-card h4 {
+    font-weight: bold;
+    font-size: medium;
+    text-align: left;
+}
+
+.desc-card p {
+    font-size: small;
+    text-align: left;
 }
