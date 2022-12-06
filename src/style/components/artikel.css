@@ -11,6 +11,7 @@ body {
 #artikel2 .center {
     display: flex;
     justify-content: center;
+    margin-top: auto;
 }
 
 #artikel2 .artikel-listCard {
@@ -35,10 +36,15 @@ body {
 #artikel2 .artikel-card {
     border: solid 1px #C4C4C4;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #artikel2 .artikel-card_header {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
 }
 
 #artikel2 .artikel-judul2 {

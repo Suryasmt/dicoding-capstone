@@ -4,7 +4,9 @@
 
 @import './pages/_about.css';
 @import './pages/_home.css';
+
 @import './pages/_authentication.css';
+@import './pages/KehamilanPage/trimester.css';
 
 @import './components/footer.css';
 @import './components/artikel.css';

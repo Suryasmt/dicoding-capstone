@@ -8,6 +8,10 @@
     #artikel2 .artikel-gbr {
         height: 150px;
     }
+
+    .box-content, .foto-trimester img {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -15,6 +19,9 @@
     #footer .footer {
         padding-left: 40px;
         padding-right: 40px;
+    }
+    .box-content, .foto-trimester img {
+        width: 100%;
     }
 }
 
@@ -35,8 +42,10 @@
     }
     
     .about-text {
-        width: 80%;
         text-align: center;
+    }
+    .box-content, .foto-trimester img {
+        width: 100%;
     }
 }
 
@@ -78,12 +87,50 @@
     #artikel2 .artikel-gbr {
         height: 190px;
     }
+
+    .box-content, .foto-trimester img {
+        width: 100%;
+    }
+
+    .container-about-us {
+        margin: 20px;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+    }
+
+    .box-content-trimester {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .card-team {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px;
+        width: auto;
+    }
+
+    .our-team-text {
+        width: 100%;
+    }
+
+    .our-team-text h2 {
+        width: 100%;
+    }
+
+    .about-sp {
+        width: 100%;
+    }
 }
 
 @media (max-width: 998px) {
     /* artikel2 */
     #artikel2 .artikel-listCard {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box-content, .foto-trimester img {
+        width: 100%;
     }
 }
 
@@ -96,5 +143,9 @@
     #artikel2 .artikel-learn-more {
         width: 8em;
         height: 44px;
+    }
+
+    .box-content, .foto-trimester img {
+        width: 100%;
     }
 }

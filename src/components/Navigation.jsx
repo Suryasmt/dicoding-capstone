@@ -10,6 +10,7 @@ import { RiCustomerService2Line } from "@react-icons/all-files/ri/RiCustomerServ
 import { BiLogOut } from "@react-icons/all-files/bi/BiLogOut";
 import userImg from "../assets/profile-user.png";
 import { signOut } from "firebase/auth";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigation = () => {
   const [isMobile, setMobile] = useState(false);
@@ -60,17 +61,20 @@ const Navigation = () => {
         <li className="navbar-link__item">
           <Link to="/">Home</Link>
         </li>
-        <li className="navbar-link__item">
-          <Link to="/kalkulator">Kehamilan</Link>
+        <li className='navbar-link__item'>
+        <NavDropdown title="Kehamilan"  id="basic-nav-dropdown">
+              <NavDropdown.Item href="/trimester1">Trimester 1</NavDropdown.Item>
+              <NavDropdown.Item href="/trimester2">Trimester 2</NavDropdown.Item>
+              <NavDropdown.Item href="/trimester3">Trimester 3</NavDropdown.Item>
+            </NavDropdown>
         </li>
         <li className="navbar-link__item">
           <Link to="/artikel">Pola Asuh</Link>
         </li>
-        <li className="navbar-link__item">
-          <Link to="/forum">Hubungi Ahli</Link>
-        </li>
-        <li className="navbar-link__item">
-          <Link to="/about">Tentang Kami</Link>
+        <li className='navbar-link__item'>
+          <Link to='/about'>
+            About
+          </Link>
         </li>
       </ul>
 

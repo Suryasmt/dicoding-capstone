@@ -24,6 +24,10 @@
     padding: 10px 20px;
 }
 
+.navbar-link__item ul li a{
+    color: pink;
+}
+
 .navbar-link__item a{
     text-decoration: none;
     color: var(--dark-grey);
