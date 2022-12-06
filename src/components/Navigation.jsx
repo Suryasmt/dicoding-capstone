@@ -17,9 +17,11 @@ const Navigation = () => {
   const navigate = useNavigate();
   let user = JSON.parse(localStorage.getItem("user"));
 
+  
+
   const handleLogout = () => {
     signOut(auth)
-      .then((result) => {
+      .then(() => {
         localStorage.clear(); //ini nanti diubah pake firebase
         setDropdownUser(false)
       })
