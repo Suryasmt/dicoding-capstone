@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { auth } from "../config/firebase";
 import BrandLogo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,37 +10,37 @@ import { RiCustomerService2Line } from "@react-icons/all-files/ri/RiCustomerServ
 import { BiLogOut } from "@react-icons/all-files/bi/BiLogOut";
 import userImg from "../assets/profile-user.png";
 import { signOut } from "firebase/auth";
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { useContext } from "react";
+import { UserContext } from "../config/context/context";
 
 const Navigation = () => {
   const [isMobile, setMobile] = useState(false);
   const [dropdownUser, setDropdownUser] = useState(false);
   const navigate = useNavigate();
-  let user = JSON.parse(localStorage.getItem("user"));
-
-  
+  const { user } = useContext(UserContext);
 
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        localStorage.clear(); //ini nanti diubah pake firebase
-        setDropdownUser(false)
+        setDropdownUser(false);
       })
       .catch((err) => {
         console.error(err);
-        setDropdownUser(false)
+        setDropdownUser(false);
       });
   };
 
   const handleHamburgerMenu = () => {
     setMobile(!isMobile);
-    setDropdownUser(false)
+    setDropdownUser(false);
   };
 
   const handleDropdownUser = () => {
     setDropdownUser(!dropdownUser);
-    setMobile(false)
+    setMobile(false);
   };
+  console.log(user)
 
   return (
     <nav className="navigationBar">
@@ -58,30 +58,29 @@ const Navigation = () => {
         className={
           isMobile ? "navbar-links navbar-links__mobile" : "navbar-links"
         }
-        onClick={() => setMobile(false)}
       >
-        <li className="navbar-link__item">
+        <li  onClick={() => setMobile(false)} className="navbar-link__item">
           <Link to="/">Home</Link>
         </li>
-        <li className='navbar-link__item'>
-        <NavDropdown title="Kehamilan"  id="basic-nav-dropdown">
-              <NavDropdown.Item href="/trimester1">Trimester 1</NavDropdown.Item>
-              <NavDropdown.Item href="/trimester2">Trimester 2</NavDropdown.Item>
-              <NavDropdown.Item href="/trimester3">Trimester 3</NavDropdown.Item>
-            </NavDropdown>
+        <li onClick={()=> {setMobile(true)}} className="navbar-link__item">
+          <NavDropdown  title="Kehamilan" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/trimester1">Trimester 1</NavDropdown.Item>
+            <NavDropdown.Item href="/trimester2">Trimester 2</NavDropdown.Item>
+            <NavDropdown.Item href="/trimester3">Trimester 3</NavDropdown.Item>
+          </NavDropdown>
         </li>
-        <li className="navbar-link__item">
+        <li onClick={() => setMobile(true)} className="navbar-link__item">
           <NavDropdown title="Pola Asuh" id="basic-nav-dropdown">
             <NavDropdown.Item href="/ArtikelPg1">Anak dan Pola Asuh</NavDropdown.Item>
             <NavDropdown.Item href="/ArtikelPg2">Kesehatan Anak</NavDropdown.Item>
             <NavDropdown.Item href="/ArtikelPg3">Tumbuh Kembang Anak</NavDropdown.Item>
           </NavDropdown>
         </li>
-        <li className='navbar-link__item'>
-          <Link to='/about'>
-            About
-          </Link>
+
+        <li  onClick={() => setMobile(false)} className="navbar-link__item">
+          <Link to="/about">About</Link>
         </li>
+
       </ul>
 
       {user ? (
@@ -101,11 +100,15 @@ const Navigation = () => {
         </button>
       )}
 
-      <div className={dropdownUser ? "user-dropdown user-dropdown-active": "user-dropdown"}>
+      <div
+        className={
+          dropdownUser ? "user-dropdown user-dropdown-active" : "user-dropdown"
+        }
+      >
         <div className="dropdown-item_user">
           <div className="photo-user">
             <img
-              src={user?.photoURL === undefined ? userImg : user?.photoURL}
+              src={user?.photoURL === null ? userImg : user?.photoURL}
               alt="userphoto"
             />
           </div>
