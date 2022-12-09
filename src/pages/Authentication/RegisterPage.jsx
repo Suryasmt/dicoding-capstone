@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -9,15 +9,13 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { auth, db } from "../../config/firebase";
+import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 const RegisterPage = () => {
   const [alredyEmail, setAlredyEmail] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -32,19 +30,10 @@ const RegisterPage = () => {
       });
   };
 
-  // let user = JSON.parse(localStorage.getItem("user"));
-  // let userRef= doc(db, "chat", user.username);
-  // setDoc(userRef, {
-  //   user:user,
-  // })
-  const handleGoogleLogin = async () => {
+  const handleGoogleLogin = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
-      .then(async (result) => {
-        console.info(result.user);
-        localStorage.setItem("user", JSON.stringify(result.user));
-
-
+      .then((result) => {
         navigate("/");
       })
       .catch((err) => {
@@ -70,7 +59,7 @@ const RegisterPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="register-title">Daftar</h1>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} autoComplete="off">
           <div className="form-group">
             <label className="mb-2" htmlFor="email">
               Email{" "}
@@ -85,6 +74,7 @@ const RegisterPage = () => {
               type="email"
               id="email"
               placeholder="Masukan Email"
+              required
             />
           </div>
           <div className="form-group">
