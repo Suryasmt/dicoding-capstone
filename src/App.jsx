@@ -2,7 +2,9 @@
 import { Routes, Route } from 'react-router-dom';
 import KalkulatorPage from './pages/KalkulatorPage';
 import ForumPage from './pages/ForumPage';
-import ArtikelPage from './pages/ArtikelPage';
+import ARTIKELPAGE_SATU from './pages/ArtikelPage/ArtikelPg1';
+import ARTIKELPAGE_DUA from './pages/ArtikelPage/ArtikelPg2';
+import ARTIKELPAGE_TIGA from './pages/ArtikelPage/ArtikelPg3';
 import AboutUsPage from './pages/AboutUsPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/Authentication/LoginPage';
@@ -54,7 +56,9 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/kalkulator" element={<KalkulatorPage />} />
         <Route path="/forum" element={<ForumPage />} />
-        <Route path="/artikel" element={<ArtikelPage />} />
+        <Route path="/ArtikelPg1" element={<ARTIKELPAGE_SATU />} />
+        <Route path="/ArtikelPg2" element={<ARTIKELPAGE_DUA />} />
+        <Route path="/ArtikelPg3" element={<ARTIKELPAGE_TIGA />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />

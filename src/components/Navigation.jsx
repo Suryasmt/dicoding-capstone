@@ -69,7 +69,11 @@ const Navigation = () => {
             </NavDropdown>
         </li>
         <li className="navbar-link__item">
-          <Link to="/artikel">Pola Asuh</Link>
+          <NavDropdown title="Pola Asuh" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/ArtikelPg1">Anak dan Pola Asuh</NavDropdown.Item>
+            <NavDropdown.Item href="/ArtikelPg2">Kesehatan Anak</NavDropdown.Item>
+            <NavDropdown.Item href="/ArtikelPg3">Tumbuh Kembang Anak</NavDropdown.Item>
+          </NavDropdown>
         </li>
         <li className='navbar-link__item'>
           <Link to='/about'>
