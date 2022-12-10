@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     height: 76px;
-    background-color: rgb(253, 137, 156);
+    background-color: rgb(255, 142, 160);
     padding: 0 25px;
     top: 0; right: 0; left: 0;
     position: fixed;
@@ -21,14 +21,15 @@
 }
 
 .header-room-chat h1{
-    color: var(--white);
+    color: var(--grey);
     font-family: 'Rubik Vinyl', cursive;
+    margin: auto;
 }
 
 .icon-back-message {
     width: 60px;
     height: 50px;
-    color: var(--white);
+    color: var(--grey);
     cursor: pointer;
 }
 
@@ -37,6 +38,7 @@
     display: flex;
     flex-direction: column;
     padding: 90px 12px;
+    padding-bottom: 120px;
     margin-top: auto;
     background-color: var(--bg-color);
     gap: 10px;
@@ -88,7 +90,7 @@
     padding: 10px 12px ;
     border-radius: 20px;
     word-break: break-all;
-    box-shadow: -5px 6px 0px 0px var(--primary);
+    box-shadow: -3px 4px 0px 0px var(--primary);
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -97,14 +99,13 @@
 
 .not-user-message {
     text-align: left;
-    box-shadow: 5px 6px 0px 0px var(--primary);
+    box-shadow: 3px 4px 0px 0px var(--primary);
 }
 
 .user-createdAt {
     font-size: 10px;
     font-weight: bold;
     width: 100%;
-    flex: 1;
     color: var(--grey);
     border-top: 1px solid var(--grey);
     padding: 10px 0 0 4px;
@@ -154,13 +155,36 @@
 @media screen and (max-width: 986px) {
     .header-room-chat h1{
         position: absolute;
+        top: 25px ;
         left: 40%;
+    }
+    .user-title {
+        font-size: 12px;
+    }
+
+    .form-message {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        padding: 12px 20px;
+    
+    }
+    .form-message input {
+      width: 80%;
     }
 }
 
 @media screen and (max-width: 602px) {
+    .header-room-chat {
+        padding: 0 5px;
+    }
     .header-room-chat h1{
         position: absolute;
         left: 30%;
     }
+
+    .user-buble-message {
+        width: 95%;
+    }
+
 }

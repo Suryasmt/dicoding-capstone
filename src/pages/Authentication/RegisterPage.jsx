@@ -22,7 +22,7 @@ const RegisterPage = () => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        navigate("/login");
+          navigate("/login");
       })
       .catch((err) => {
         console.error(err);
@@ -40,7 +40,6 @@ const RegisterPage = () => {
         console.info(err);
       });
   };
-
   return (
     <div className="container-register">
       <div className="register-back-to-home">
