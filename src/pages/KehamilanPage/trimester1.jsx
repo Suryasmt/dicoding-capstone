@@ -1,7 +1,7 @@
 import React from 'react'
 import fototrimester from '../../assets/trimester1.jpg'
 import Footer from '../../components/Footer'
-import Navigation from '../../components/Navigation'
+import Navigation from '../../components/Navigation/Navigation'
 
 const TRIMESTER_SATU = () => {
   return (

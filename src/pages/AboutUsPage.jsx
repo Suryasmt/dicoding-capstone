@@ -4,7 +4,7 @@ import surya from '../assets/surya.jpg'
 import gigih from '../assets/gigih.jpg'
 import siti from '../assets/siti.jpg'
 import Footer from '../components/Footer'
-import Navigation from '../components/Navigation'
+import Navigation from '../components/Navigation/Navigation'
 
 const AboutUsPage = () => {
   return (

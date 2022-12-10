@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Article from "../../components/Article";
 import axios from "axios";
-import Navigation from "../../components/Navigation";
+import Navigation from "../../components/Navigation/Navigation";
 import Footer from "../../components/Footer";
 
 function ArtikelPg2() {

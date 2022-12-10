@@ -11,11 +11,13 @@ import {
 } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../config/context/context";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Spinner } from "react-bootstrap";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
-  const { user } = useContext(UserContext);
+  const [user] = useAuthState(auth)
+  const [loading, setLoading ] = useState(true)
 
   const navigate = useNavigate();
 
@@ -46,11 +48,11 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    if (user !== null) {
+    if (user) {
       navigate("/");
     }
   });
-
+  
   return (
     <div className="container-login">
       <div className="back-to-home">

@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Dosis:wght@200;300;400;500;600&family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400&display=swap');
 
-@import './components/navigation.css';
 
 @import './pages/_about.css';
 @import './pages/_home.css';
-
 @import './pages/_authentication.css';
 @import './pages/KehamilanPage/trimester.css';
+@import './pages/_live-message.css';
+
 
 @import './components/footer.css';
 @import './components/artikel.css';
+@import './components/navigation.css';
 
 
 @import './_responsive.css';
@@ -56,7 +57,7 @@ html::-webkit-scrollbar-track{
 }
   
 html::-webkit-scrollbar-thumb{
-    background-color: #FF758F;
+    background-color: rgba(255, 192, 203, 0.748);
 }
 
 .loading-login {
