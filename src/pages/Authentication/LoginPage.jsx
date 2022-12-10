@@ -39,7 +39,7 @@ const LoginPage = () => {
   const handleGoogleLogin = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(() => {
         navigate("/");
       })
       .catch((err) => {
