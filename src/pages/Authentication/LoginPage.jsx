@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -11,9 +11,12 @@ import {
 } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../config/context/context";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
+  const { user } = useContext(UserContext);
+
   const navigate = useNavigate();
 
   const handleEmailPasswordLogin = (e) => {
@@ -23,7 +26,6 @@ const LoginPage = () => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        localStorage.setItem("user", JSON.stringify(result.user));
         navigate("/");
       })
       .catch((err) => {
@@ -36,8 +38,6 @@ const LoginPage = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.info(result.user);
-        localStorage.setItem("user", JSON.stringify(result.user));
         navigate("/");
       })
       .catch((err) => {
@@ -45,13 +45,11 @@ const LoginPage = () => {
       });
   };
 
-  
-  useEffect(()=>{
-    let user = localStorage.getItem("user")
-    if (user) {
-      return navigate("/")
+  useEffect(() => {
+    if (user !== null) {
+      navigate("/");
     }
-  },[navigate])
+  });
 
   return (
     <div className="container-login">
@@ -72,7 +70,12 @@ const LoginPage = () => {
             <label className="mb-2" htmlFor="email">
               Email
             </label>
-            <input type="email" id="email" placeholder="Masukan Email" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Masukan Email"
+              required
+            />
           </div>
           <div className="form-group">
             <label className="mb-2" htmlFor="password">

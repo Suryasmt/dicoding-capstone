@@ -7,9 +7,15 @@ import Navigation from "../components/Navigation";
 const HomePage = () => {
   return (
     <>
-      <Navigation />
-      <Content />
-      <Footer />
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Content />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

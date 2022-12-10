@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -13,25 +13,20 @@ import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
-  const [alredyEmail, setAlredyEmail] = useState(false)
-
-
+  const [alredyEmail, setAlredyEmail] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
     createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        localStorage.setItem("user", JSON.stringify(result.user));
-        console.log(result.user)
-        navigate('/login')
+      .then(() => {
+        navigate("/login");
       })
       .catch((err) => {
         console.error(err);
-        setAlredyEmail(true)
+        setAlredyEmail(true);
       });
   };
 
@@ -39,8 +34,6 @@ const RegisterPage = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.info(result.user);
-        localStorage.setItem("user", JSON.stringify(result.user));
         navigate("/");
       })
       .catch((err) => {
@@ -66,18 +59,30 @@ const RegisterPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="register-title">Daftar</h1>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} autoComplete="off">
           <div className="form-group">
             <label className="mb-2" htmlFor="email">
-              Email {alredyEmail ? (<p style={{color:'red'}}>*Email sudah digunakan</p>) : ('')}
+              Email{" "}
+              {alredyEmail ? (
+                <p style={{ color: "red" }}>*Email sudah digunakan</p>
+              ) : (
+                ""
+              )}
             </label>
-            <input type="email" id="email" placeholder="Masukan Email" />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              id="email"
+              placeholder="Masukan Email"
+              required
+            />
           </div>
           <div className="form-group">
             <label className="mb-2" htmlFor="password">
               Password
             </label>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               type="password"
               id="password"
               placeholder="Masukan Password"
