@@ -4,9 +4,9 @@
 
 @import './pages/_about.css';
 @import './pages/_home.css';
-
+@import './pages/not-found.css';
 @import './pages/_authentication.css';
-@import './pages/KehamilanPage/trimester.css';
+@import './pages/KehamilanPage/trimester1.css';
 
 @import './components/footer.css';
 @import './components/artikel.css';
@@ -33,8 +33,8 @@
     --border:1rem solid #aaa;
     --box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
     --focus: rgb(230, 230, 49);
-  }
- 
+}
+
 body,
 html {
     width: 100%;

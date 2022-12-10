@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaCalculator } from "react-icons/fa";
+import { GrArticle } from "@react-icons/all-files/gr/GrArticle";
 import { RiDiscussFill } from "react-icons/ri";
-import { BsBookFill } from "react-icons/bs";
+import { RiArticleLine } from "@react-icons/all-files/ri/RiArticleLine";
 import gallery1 from "../../assets/hero-image-vektor.png";
 import Article from "../Article";
 import axios from "axios";
@@ -25,9 +25,9 @@ const Content = () => {
       <div className="box-content">
         <div className="content-info">
           <div className="content-info__inner">
-            <h1 className="content-info__title">Percayakan setiap fase kehamilan dan perkembangan si kecil kepada Smart Parents</h1>
+            <h1 className="content-info__title">Bersama Smart Parents fase kehamilan dan perkembangan anak menjadi lebih mudah</h1>
             <p className="content-info__desc">
-            Platform ini menyediakan article-article yang bermanfaat dari fase kehamilan sampai anak besar. Disini para orang tua juga bisa memanfaatkan Forum Diskusi untuk mencari solusi dan memberi solusi. dan disini juga tersedia Kalkulator Kelahiran untuk mengetahui calon anak yang akan lahir. 
+            Platform ini menyediakan article-article yang bermanfaat seputar fase kehamilan dan parenting. Disini para orang tua juga bisa memanfaatkan forum live chat untuk bertanya dan menjawab.
             </p>
           </div>
           <div className="content-info__images">
@@ -37,16 +37,16 @@ const Content = () => {
       </div>
       <div className="box-item">
         <span className="item-fitur">
-          <FaCalculator />
-          <p className="item-fitur__title">Kalkulator Kehamilan</p>
+          <GrArticle />
+          <p className="item-fitur__title">Kehamilan</p>
         </span>
         <span className="item-fitur">
           <RiDiscussFill />
-          <p className="item-fitur__title">Forum Diskusi</p>
+          <p className="item-fitur__title">Live Chat</p>
         </span>
         <span className="item-fitur">
-          <BsBookFill />
-          <p className="item-fitur__title">Artikel Keluarga</p>
+          <RiArticleLine />
+          <p className="item-fitur__title">Pola Asuh</p>
         </span>
       </div>
       <section id="artikel2">
