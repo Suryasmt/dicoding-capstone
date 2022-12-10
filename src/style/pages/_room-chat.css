@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@300;400&family=Rubik+Vinyl&display=swap');
+
+.room-chat {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+}
+
+.header-room-chat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+    background-color: rgb(255, 142, 160);
+    padding: 0 25px;
+    top: 0; right: 0; left: 0;
+    position: fixed;
+    box-shadow: var(--box-shadow);
+}
+
+.header-room-chat h1{
+    color: var(--grey);
+    font-family: 'Rubik Vinyl', cursive;
+    margin: auto;
+}
+
+.icon-back-message {
+    width: 60px;
+    height: 50px;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.container-buble-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 12px;
+    padding-bottom: 120px;
+    margin-top: auto;
+    background-color: var(--bg-color);
+    gap: 10px;
+}
+
+.user-buble-message {
+    width: 60%;
+    display: flex;
+    padding: 16px;
+    margin-left: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.not-user-buble-message {
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.user-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.user-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.box-info_user {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.user-title {
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
+}
+.not-user-title {
+    display: block;
+}
+
+.user-message {
+    background-color: var(--secondary);
+    padding: 10px 12px ;
+    border-radius: 20px;
+    word-break: break-all;
+    box-shadow: -3px 4px 0px 0px var(--primary);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.not-user-message {
+    text-align: left;
+    box-shadow: 3px 4px 0px 0px var(--primary);
+}
+
+.user-createdAt {
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%;
+    color: var(--grey);
+    border-top: 1px solid var(--grey);
+    padding: 10px 0 0 4px;
+    display: none;
+}
+.not-user-createdAt {
+    display: block;
+}
+
+.form-message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 0; left: 0; right: 0;
+    position: fixed;
+    padding: 12px 40px 12px 30px;
+    gap: 36px;
+    box-shadow: px 0 7px 2px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+
+}
+.form-message input {
+    border-radius: 10px;
+    padding: 10px 16px;
+    flex: 1;
+    height: 48px;
+    outline: none;
+    word-break: break-all;
+    font-size: 20px;
+}
+
+.form-message button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: var(--white);
+    align-content: center;
+    border-radius: 10px;
+}
+
+.icon-btn-message {
+    width: 100%;
+    height: 40px;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 986px) {
+    .header-room-chat h1{
+        position: absolute;
+        top: 22px ;
+        left: 40%;
+    }
+    .user-title {
+        font-size: 12px;
+    }
+
+    .form-message {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        padding: 12px 20px;
+    
+    }
+    .form-message input {
+      width: 80%;
+    }
+}
+
+@media screen and (max-width: 602px) {
+    .header-room-chat {
+        padding: 0 5px;
+    }
+    .header-room-chat h1{
+        position: absolute;
+        left: 33%;
+    }
+
+    .user-buble-message {
+        width: 95%;
+    }
+
+}
