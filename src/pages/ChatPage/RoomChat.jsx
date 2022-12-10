@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoMdSend } from "@react-icons/all-files/io/IoMdSend";
 import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
-import { useAuthState } from 'react-firebase-hooks/auth'
+import { useAuthState } from "react-firebase-hooks/auth";
 import {
   doc,
   setDoc,
@@ -18,19 +18,14 @@ import { useNavigate } from "react-router-dom";
 export default function RoomChat() {
   const [isMobile] = useState(false);
   const [dropdownUser, setDropdownUser] = useState(false);
-  const navigate = useNavigate()
-  const [user] = useAuthState(auth)
-  const [message, setMessage] = useState([
-    {
-      id: 123123,
-      message: "Ini user Lain",
-      createdAt: Date.now(),
-      user: {
-        email: "ulil",
-        photo: null,
-      },
-    },
-  ]);
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+  const [message, setMessage] = useState([]);
+
+  const scrollToBottomMsg = () => {
+    let docHack = document.body.scrollHeight;
+    window.scrollTo(-40, docHack);
+  };
 
   const handleMessage = (e) => {
     e.preventDefault();
@@ -53,11 +48,10 @@ export default function RoomChat() {
         email: user.email,
         photo: user.photoURL,
       },
-    })
-      .then((res) => {})
-      .catch((err) => {
-        console.error(err);
-      });
+    }).catch((err) => {
+      console.error(err);
+    });
+    scrollToBottomMsg();
   };
 
   // membaca data dari collection chat
@@ -74,41 +68,46 @@ export default function RoomChat() {
 
   // component did mount
   useEffect(() => {
+    if(!user) {
+      navigate('/login')
+    }
+    
     const messageTrigger = () => {
       let messageRef = collection(dbStore, "message");
-  
+
       onSnapshot(messageRef, (newRec) => {
         getMessageCollection()
-        .then((res) => {
-          setMessage(res);
-        }).catch((err)=>{
-          console.error(err)
-        })
+          .then((res) => {
+            setMessage(res);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
       });
     };
 
-    getMessageCollection()
-    .then((res) => {
+    getMessageCollection().then((res) => {
       setMessage(res);
     });
 
-
     // component did update
     return messageTrigger();
-  
-  },[]);
-
-  if (user === null) {
-    return (navigate('/login'));
-  }
+  }, [user, navigate]);
 
   return (
     <>
       <div className="room-chat">
         <div className="header-room-chat">
-          <IoIosArrowBack className="icon-back-message" onClick={(e) => navigate('/')}/>
+          <IoIosArrowBack
+            className="icon-back-message"
+            onClick={(e) => navigate("/")}
+          />
           <h1>LIVE CHAT</h1>
-          <ButtonSigIn setDropdownUser={setDropdownUser} dropdownUser={dropdownUser} isMobile={isMobile}/>
+          <ButtonSigIn
+            setDropdownUser={setDropdownUser}
+            dropdownUser={dropdownUser}
+            isMobile={isMobile}
+          />
         </div>
         <div className="container-buble-message">
           {message.map((data) => {
@@ -129,12 +128,30 @@ export default function RoomChat() {
                 </div>
 
                 <div className="box-info_user">
-                  <div className={user?.email === data.user.email ? "user-title" : "not-user-title user-title"}>
+                  <div
+                    className={
+                      user?.email === data.user.email
+                        ? "user-title"
+                        : "not-user-title user-title"
+                    }
+                  >
                     <small>{data.user.email}</small>
                   </div>
-                  <div className={user?.email === data.user.email ? "user-message" : "not-user-message user-message"}>
+                  <div
+                    className={
+                      user?.email === data.user.email
+                        ? "user-message"
+                        : "not-user-message user-message"
+                    }
+                  >
                     <small>{data.message}</small>
-                    <div className={user?.email === data.user.email ? "user-createdAt" : "not-user-createdAt user-createdAt"}>
+                    <div
+                      className={
+                        user?.email === data.user.email
+                          ? "user-createdAt"
+                          : "not-user-createdAt user-createdAt"
+                      }
+                    >
                       <small>
                         {moment(data.createdAt).format(
                           "dddd hh:mm | DD/MM/YYYY"

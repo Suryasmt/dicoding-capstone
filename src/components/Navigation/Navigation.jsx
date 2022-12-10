@@ -56,7 +56,7 @@ const Navigation = () => {
           </NavDropdown>
         </li>
         <li onClick={() => setMobile(false)} className="navbar-link__item">
-          <Link to="/message">LiveChat</Link>
+          <Link to="/message">Live Chat</Link>
         </li>
         <li onClick={() => setMobile(false)} className="navbar-link__item">
           <Link to="/about">About</Link>

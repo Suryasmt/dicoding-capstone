@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -11,20 +11,18 @@ import {
 } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 const RegisterPage = () => {
   const [alredyEmail, setAlredyEmail] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [user] = useAuthState(auth);
 
   const handleRegister = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        navigate("/login");
+          navigate("/login");
       })
       .catch((err) => {
         console.error(err);
@@ -43,11 +41,6 @@ const RegisterPage = () => {
       });
   };
 
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  });
 
   return (
     <div className="container-register">
