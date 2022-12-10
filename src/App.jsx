@@ -11,6 +11,7 @@ import TRIMESTER_SATU from './pages/KehamilanPage/trimester1'
 import TRIMESTER_DUA from './pages/KehamilanPage/trimester2'
 import TRIMESTER_TIGA from './pages/KehamilanPage/trimester3'
 import NotFound from './pages/NotFound';
+import RoomChat from './pages/ChatPage/RoomChat';
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="/ArtikelPg1" element={<ARTIKELPAGE_SATU />} />
         <Route path="/ArtikelPg2" element={<ARTIKELPAGE_DUA />} />
         <Route path="/ArtikelPg3" element={<ARTIKELPAGE_TIGA />} />
+        <Route path= "/message" element={<RoomChat />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />

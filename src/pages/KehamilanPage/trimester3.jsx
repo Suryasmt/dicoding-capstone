@@ -7,7 +7,7 @@ import perkembanganJanin from '../../assets/perkembangan-janin.jpg'
 import bumilHindari from '../../assets/hal-yg-perlu-dihindari-bumil.jpg'
 import makananbumil from '../../assets/10-makanan-bumil.jpg'
 import Footer from '../../components/Footer'
-import Navigation from '../../components/Navigation'
+import Navigation from '../../components/Navigation/Navigation'
 
 const TRIMESTER_TIGA = () => {
   return (

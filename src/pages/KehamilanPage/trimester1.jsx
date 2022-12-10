@@ -4,7 +4,7 @@ import fisiktrimester123 from '../../assets/perubahan-tubuh-trimester-123.jpg'
 import makananbumil from '../../assets/10-makanan-bumil.jpg'
 import bumilHindari from '../../assets/hal-yg-perlu-dihindari-bumil.jpg'
 import Footer from '../../components/Footer'
-import Navigation from '../../components/Navigation'
+import Navigation from '../../components/Navigation/Navigation'
 
 const TRIMESTER_SATU = () => {
   return (
