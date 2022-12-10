@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -12,12 +12,10 @@ import {
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Spinner } from "react-bootstrap";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
-  const [user] = useAuthState(auth)
-  const [loading, setLoading ] = useState(true)
+  const [user] = useAuthState(auth);
 
   const navigate = useNavigate();
 
@@ -27,7 +25,7 @@ const LoginPage = () => {
     const password = e.target.password.value;
 
     signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
+      .then(() => {
         navigate("/");
       })
       .catch((err) => {
@@ -36,15 +34,14 @@ const LoginPage = () => {
       });
   };
 
-  const handleGoogleLogin = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-      .then(() => {
-        navigate("/");
-      })
-      .catch((err) => {
-        console.info(err);
-      });
+  const handleGoogleLogin = async () => {
+    const provider = await new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
@@ -52,7 +49,7 @@ const LoginPage = () => {
       navigate("/");
     }
   });
-  
+
   return (
     <div className="container-login">
       <div className="back-to-home">
@@ -67,7 +64,11 @@ const LoginPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="login-title">Masuk</h1>
-        <form onSubmit={handleEmailPasswordLogin}>
+        <form
+          onSubmit={handleEmailPasswordLogin}
+          autoComplete="off"
+          autoSave="off"
+        >
           <div className="form-group">
             <label className="mb-2" htmlFor="email">
               Email

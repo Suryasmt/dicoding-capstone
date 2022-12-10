@@ -20,7 +20,6 @@ export default function RoomChat() {
   const [dropdownUser, setDropdownUser] = useState(false);
   const navigate = useNavigate()
   const [user] = useAuthState(auth)
-  const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState([
     {
       id: 123123,
@@ -93,7 +92,6 @@ export default function RoomChat() {
       setMessage(res);
     });
 
-    setLoading(false);
 
     // component did update
     return messageTrigger();
