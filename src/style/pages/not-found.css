@@ -1,0 +1,16 @@
+.not-found {
+    text-align: center;
+    margin: 75px;
+}
+
+.not-found h1 {
+    font-weight: bold;
+    font-family: 'inter';
+    font-size: 260px;
+}
+
+.not-found p {
+    font-family: 'inter';
+    font-size: 30px;
+    letter-spacing: 16px;
+}

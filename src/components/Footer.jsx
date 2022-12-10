@@ -13,25 +13,27 @@ const Footer = () => {
                 <div className="container-fluid py-4">
                     <div className="container">
                         <div className="row">
-                            <div className="footer col-lg-4 col-md-4 col-sm-6 mb-4">
+                            <div className="footer col-lg-3 col-md-4 col-sm-6 mb-4">
                                 <img className="footer-logo" src={BrandLogo} alt='Logo Smart Parent'></img>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
                             </div>
-                            <div className="footer col-lg-4 col-md-4 col-sm-6 mb-4">
+                            <div className="footer col-lg-5 col-md-4 col-sm-6 mb-4">
                                 <h6>Address</h6>
-                                <p>Jl. Batik Kumeli No.50, Sukaluyu, Kec. Cibeunying Kaler,
-                                    Kota Bandung, Jawa Barat 40123</p>
+                                <p>Gedung SmartParents, Jl. HR Rasuna Said Kav. B32-33, Jakarta Selatan 12940</p>
+                                <p>Phone: +62 21-5095-9900</p>
+                                <p>Email: help@smartparents.com</p>
                             </div>
-                            <div className="footer col-lg-4 col-md-4 col-sm-6 mb-4">
+                            <div className="footer col-lg-4 col-md-4 col-sm-6 mb-2">
                                 <h6>Stay Tuned</h6>
                                 <div className='footer-social'>
-                                    <a href="/#"><FaFacebookSquare /></a>
+                                    <a href="/#"><FaFacebookSquare className='icon-footer'/></a>
                                 </div>
                                 <div className='footer-social'>
-                                    <a href="/#"><BsInstagram /></a>
+                                    <a href="/#"><BsInstagram className='icon-footer'/></a>
                                 </div>
                                 <div className='footer-social'>
-                                    <a href="/#"><BsTwitter /></a>
+                                    <a href="/#"><BsTwitter className='icon-footer'
+                                    /></a>
                                 </div>
                             </div>
                             <hr />

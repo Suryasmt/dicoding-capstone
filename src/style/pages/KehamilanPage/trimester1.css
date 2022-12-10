@@ -1,0 +1,186 @@
+.box-content-trimester {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-trimester {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+}
+
+.about-title-trimester{
+    width: 100%;
+    text-align: justify;
+}
+.about-title-trimester h1{
+    font-weight: bold;
+    color: var(--primary);
+    margin-top: 50px;
+}
+
+
+
+.foto-trimester img{
+    width: 100%;
+    justify-content: end;
+    margin-top: 80px;
+}
+
+
+
+.container-card-trimester {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin-top: 50px;
+}
+.card-desc-trimester {
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(230, 70, 137, 0.384);
+}
+.card-judul-desc-trimester h4{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.card-judul-desc-trimester {
+    font-size: 12px;
+    text-align: justify;
+    margin: 20px;
+}
+
+.fisik-trimester-1{
+    margin: auto;
+    width: 90%;
+}
+.fisik-trimester-1 img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.makanan-bumil {
+    margin: auto;
+    width: 80%;
+}
+.makanan-bumil img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* container 2 */
+.container-2-card-trimester {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    margin-top: 50px;
+}
+
+/* trimester 2 */
+.decs-trimester-2 h4 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.decs-trimester-2 p {
+    margin: 20px;
+    text-align: justify;
+    font-size: 12px;
+    margin-top: -5px;
+}
+.decs-trimester-2 ul {
+    margin-top: -10px;
+}
+.decs-trimester-2 ul li {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+
+/* card mingguan trimester */
+.card-trimester-mingguan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgb(254, 243, 228);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.judul-perkembangan-janin h2{
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+.container-card-mingguan {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.judul-perkembangan-janin h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--primary);
+}
+.card-mingguan{
+    /* display: block; */
+    border: solid 1px;
+    width: 6%;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.card-mingguan:hover {
+    box-shadow: 0 5px 10px  #ccb3b8;
+}
+
+.card-mingguan p{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-mingguan h4{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -15px;
+    color: black;
+}
+
+.card-mingguan a {
+    text-decoration: none;
+}
+
+.text-trimester1 p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: large;
+    font-weight: bold;
+    color: #FF758F;
+}

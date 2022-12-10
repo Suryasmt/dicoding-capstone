@@ -92,6 +92,7 @@
         width: 100%;
     }
 
+    /* about us */
     .container-about-us {
         margin: 20px;
         flex-direction: column;
@@ -106,7 +107,7 @@
     
     .card-team {
         grid-template-columns: repeat(1, 1fr);
-        margin: 20px;
+        margin: 50px;
         width: auto;
     }
 
@@ -120,6 +121,66 @@
 
     .about-sp {
         width: 100%;
+    }
+    .about-sp1 {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .about-sp2 {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    /* trimester page */
+    .container-card-trimester {
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-desc-trimester {
+        margin-top: 50px;
+    }
+    .container-2-card-trimester{
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-trimester {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about-title-trimester {
+        order: 2;
+    }
+    .foto-trimester {
+        order: 1;
+    }
+    .container-card-mingguan {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .card-mingguan {
+        width: 50px;
+    }
+    /* home gigs */
+    .content-info__title {
+        margin-left: 20px;
+    }
+    .content-info__desc {
+        margin: 20px;
+    }
+    .content-info__images {
+        order: 1;
+    }
+    .content-info__inner {
+        order: 2;
+    }
+
+    .content-info {
+        margin-top: -15px;
     }
 }
 

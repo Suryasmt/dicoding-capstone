@@ -5,6 +5,7 @@ import gigih from '../assets/gigih.jpg'
 import siti from '../assets/siti.jpg'
 import Footer from '../components/Footer'
 import Navigation from '../components/Navigation'
+import { Link } from 'react-router-dom'
 
 const AboutUsPage = () => {
   return (
@@ -20,7 +21,26 @@ const AboutUsPage = () => {
         <div className='container-about-us'>
           <div className='about-sp'>
             <h2>Smart Parents</h2>
-            <p>Smart Parents adalah Platform untuk membantu para calon orang tua/orang tua yang masih awam tentang Kehamilan, Kelahiran, dan mendidik anak atau parenting.  Fitur yang tersedia yaitu Fitur Kalkulator Kelahiran adalah untuk mengetahui waktu bayi yang akan lahir, Fitur Artikel adalah fitur yang berisi tentang  kehamilan, kelahiran, dan parenting, dan Fitur Forum Diskusi adalah fitur untuk sharing dan memberi solusi kepada orang tua yang memiliki masalah seputar kehamilan, kelahiran, dan parenting.</p>
+            <p>Smart Parents adalah website yang berisi informasi seputar kehidupan keluarga sehari-hari yang berfokus kepada kesehatan, tumbuh kembang anak, parenting dan kehamilan. Kami berkomitmen dan berusaha untuk memberikan beragam informasi yang menarik dan up to date sehingga dapat menambah wawasan bagi ibu hamil dan keluarga.</p>
+          </div>
+
+          <div className='card-about-sp1'>
+            <div className='about-sp1'>
+              <h3>Disclaimer</h3>
+              <p>Penting untuk dipahami bahwa, bagimanapun juga, informasi yang disediakan oleh Smart Parents tidak dapat digunakan sebagai acuan pengganti konsultasi kehamilan. Anda diwajibkan untuk tetap berkonsultasi dengan dokter ataupun tenaga kesehatan berlisensi mengenai pertanyaan yang anda miliki seputar kondisi kehamilan. Jangan pernah mengabaikan saran medis profesional atau menunda bantuan karena sesuatu yang telah anda baca di situs kami.</p>
+            </div>
+          </div>
+
+          <div className='about-sp2'>
+            <h3>Live Chat</h3>
+            <p>Kami juga menyediakan forum live chat untuk bertanya maupun menjawab seputar masalah dalam kehamian dan parenting dengan pengguna lain maupun para profesional di dalamnya.</p>
+            <div className='button-di-about'>
+              <p>Mari bergabung diforum kami
+              <Link to="/">
+                <button className='button-to-chat'>Klik Disini</button>
+              </Link>
+              </p>
+            </div>
           </div>
 
           <div className='our-team-text'>
