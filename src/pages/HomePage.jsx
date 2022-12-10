@@ -3,12 +3,9 @@ import Content from "../components/HomeItem/Content";
 import Navigation from "../components/Navigation/Navigation";
 
 const HomePage = () => {
- 
   return (
     <>
-      <header>
-        <Navigation />
-      </header>
+      <Navigation />
       <main>
         <Content />
       </main>
