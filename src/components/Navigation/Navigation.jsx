@@ -43,22 +43,16 @@ const Navigation = () => {
           className="navbar-link__item"
         >
           <NavDropdown title="Kehamilan" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/trimester1">Trimester 1</NavDropdown.Item>
-            <NavDropdown.Item href="/trimester2">Trimester 2</NavDropdown.Item>
-            <NavDropdown.Item href="/trimester3">Trimester 3</NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/trimester1">Trimester 1</Link></NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/trimester2">Trimester 2</Link></NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/trimester3">Trimester 3</Link></NavDropdown.Item>
           </NavDropdown>
         </li>
         <li onClick={() => setMobile(true)} className="navbar-link__item">
           <NavDropdown title="Pola Asuh" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/ArtikelPg1">
-              Anak dan Pola Asuh
-            </NavDropdown.Item>
-            <NavDropdown.Item href="/ArtikelPg2">
-              Kesehatan Anak
-            </NavDropdown.Item>
-            <NavDropdown.Item href="/ArtikelPg3">
-              Tumbuh Kembang Anak
-            </NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/ArtikelPg1">Anak dan Pola Asuh</Link></NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/ArtikelPg2">Kesehatan Anak</Link></NavDropdown.Item>
+            <NavDropdown.Item> <Link to="/ArtikelPg3">Tumbuh Kembang Anak</Link></NavDropdown.Item>
           </NavDropdown>
         </li>
         <li onClick={() => setMobile(false)} className="navbar-link__item">

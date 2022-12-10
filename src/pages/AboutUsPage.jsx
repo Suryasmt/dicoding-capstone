@@ -36,7 +36,7 @@ const AboutUsPage = () => {
             <p>Kami juga menyediakan forum live chat untuk bertanya maupun menjawab seputar masalah dalam kehamian dan parenting dengan pengguna lain maupun para profesional di dalamnya.</p>
             <div className='button-di-about'>
               <p>Mari bergabung diforum kami
-              <Link to="/">
+              <Link to="/message">
                 <button className='button-to-chat'>Klik Disini</button>
               </Link>
               </p>
