@@ -15,7 +15,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth)
 
   const navigate = useNavigate();
 
@@ -34,14 +34,15 @@ const LoginPage = () => {
       });
   };
 
-  const handleGoogleLogin = async () => {
-    const provider = await new GoogleAuthProvider();
-    try {
-      await signInWithPopup(auth, provider);
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
+  const handleGoogleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.info(err);
+      });
   };
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const LoginPage = () => {
       navigate("/");
     }
   });
-
+  
   return (
     <div className="container-login">
       <div className="back-to-home">
@@ -64,11 +65,7 @@ const LoginPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="login-title">Masuk</h1>
-        <form
-          onSubmit={handleEmailPasswordLogin}
-          autoComplete="off"
-          autoSave="off"
-        >
+        <form onSubmit={handleEmailPasswordLogin} autoComplete="off" autoSave="off">
           <div className="form-group">
             <label className="mb-2" htmlFor="email">
               Email

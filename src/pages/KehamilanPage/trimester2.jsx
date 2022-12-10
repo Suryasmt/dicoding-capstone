@@ -3,7 +3,6 @@ import fototrimester from '../../assets/trimester1.jpg'
 import fisiktrimester123 from '../../assets/perubahan-tubuh-trimester-123.jpg'
 import emosiBumil from '../../assets/perubahan-emosi-ibu.jpeg'
 import bumilHindari from '../../assets/hal-yg-perlu-dihindari-bumil.jpg'
-import bumilOhlaraga from '../../assets/bumil-ohlaraga.jpg'
 import Footer from '../../components/Footer'
 import Navigation from '../../components/Navigation/Navigation'
 

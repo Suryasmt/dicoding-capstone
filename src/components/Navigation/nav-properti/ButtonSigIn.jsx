@@ -1,6 +1,5 @@
 import { BiLogOut } from "@react-icons/all-files/bi/BiLogOut";
 import { signOut } from "firebase/auth";
-import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiCustomerService2Line } from "react-icons/ri";
