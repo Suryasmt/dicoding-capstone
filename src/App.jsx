@@ -15,37 +15,6 @@ import RoomChat from './pages/ChatPage/RoomChat';
 
 
 const App = () => {
-  //   // state
-  //   const [isLogin, setIsLogin] = useState(false)
-  //   const [loading, setLoading] = useState(true)
-
-  //     // componentlifecycle
-  // useEffect(()=>{
-  //   // notifPermission()
-  //   // getFCMToken()
-  //   const auth = getAuth()
-  //   onAuthStateChanged(auth, (result) => {
-  //     if(result){
-  //       console.info(result)
-  //       setIsLogin(true)
-  //       setLoading(false)
-  //       return
-  //     }
-
-  //     setIsLogin(false)
-  //     setLoading(false)
-  //   })
-
-  // },[])
-
-  // if(loading){
-  //   return (
-  //     <div className='loading-login'>
-  //       <Spinner animation="border" variant="danger" />
-  //     </div>
-  //   );
-  // }
-
   return (
       <Routes>
         <Route path="/" element={<HomePage />} />

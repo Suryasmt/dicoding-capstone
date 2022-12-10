@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import heroAuth from "../../assets/login-image-vektor.png";
 import logoImage from "../../assets/logo.png";
 import { AiOutlineHome } from "@react-icons/all-files/ai/AiOutlineHome";
@@ -12,12 +12,10 @@ import {
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Spinner } from "react-bootstrap";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
   const [user] = useAuthState(auth)
-  const [loading, setLoading ] = useState(true)
 
   const navigate = useNavigate();
 

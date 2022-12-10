@@ -38,8 +38,9 @@
 
 .card-about-sp1{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
+
 .about-sp1 {
     width: 40%;
     border-radius: 50px;
