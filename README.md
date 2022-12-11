@@ -1,7 +1,10 @@
-# Smart Parents
+# **Smart Parents**
 **Smart Parents** adalah website penyedia informasi seputar keluarga khususnya kehamilan dan pola asuh.
 Kami berkomitmen dan berusaha untuk memberikan beragam informasi yang menarik dan up to date sehingga dapat menambah wawasan bagi ibu hamil dan keluarga. 
 
+## Latar Belakang
+Kehamilan adalah salah satu momen bahagia bagi sebuah keluarga kecil, apalagi bagi pasangan muda yang baru menikah ataupun pasangan yang sudah lama menunggu hadirnya momongan. Sayangnya, masih banyak calon orang tua yang belum memiliki pengalaman dan masih awam tentang dunia kehamilan maupun mengasuh anak.
+Menurut Pipitcahyani, Tatarini Ika (2018: 47) pada penelitiannya, tingkat pengetahuan Ibu hamil di BPM Umi Wahyu Jati Surabaya berada di tingkat kurang yaitu sebanyak 43.3% dan hanya sebagian kecil yang memiliki pengetahuan cukup yaitu sebesar 26.7%.
 
 ## Fitur
 ![fitur2](https://user-images.githubusercontent.com/110590829/206923071-734d8aa1-4f17-46b9-b44d-7e208c26f013.png)
@@ -24,36 +27,36 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 ## Other Resources Link
 
 
-| No        | API       |                                               |    
+| No        | API       | Url                                          |    
 | --------  | --------  | ----------------------------------------------    
-| 1.        | Kehamilan | (https://www.halodoc.com/kesehatan/trimester-1) (https://www.halodoc.com/kesehatan/trimester-2) (https://www.halodoc.com/kesehatan/trimester-3) 
+| 1.        | Kehamilan | https://www.halodoc.com/kesehatan/trimester-1, https://www.halodoc.com/kesehatan/trimester-2, https://www.halodoc.com/kesehatan/trimester-3 
 | 2.        | Pola Asuh | https://parent-9fc99-default-rtdb.asia-southeast1.firebasedatabase.app/.json |
 | 3.        | Register dan Login | https://firebase.google.com/ (Authentication) 
 | 4.        | Live Chat | https://firebase.google.com/ (Firestore)  
 
 
 
-| No        |  Library  |                                                |   
+| No        |  Library  | Url                                            |   
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Axios     | https://axios-http.com/                           
 | 2.        | Moment JS | https://momentjs.com/                             
 
 
 
-| No        | Framework |                                               |  
+| No        | Framework | Url                                           |  
 | --------  | --------  | ----------------------------------------------    
 | 1.        | React JS  | https://reactjs.org/                           
 | 2.        | React Bootstrap | https://react-bootstrap.github.io/       
 | 3.        | Bootstrap | https://getbootstrap.com/                             
 
 
-| No        | Assets    |                                               |   
+| No        | Assets    |  Url                                          |   
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Freepik   | https://reactjs.org/                              
 | 2.        | Flaticon  | https://www.flaticon.com/                         
 
 
-| No       | Font     |                                                 |    
+| No        | Font      | Url                                             |    
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Google Font | https://fonts.google.com/ 
 
