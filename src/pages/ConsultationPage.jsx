@@ -19,7 +19,7 @@ export default function ConsultationPage() {
             <small>SegeraHadir!</small>
           </div>
           <div className="item-consultation__body">
-            <h2>Dalam Tahap Pengembangan</h2>
+            <h2>Sedang dalam tahap pengembangan</h2>
 
             <div className="construction-icon">
               <FaTools className="construction-icon__tools"/>
