@@ -24,41 +24,37 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 ## Other Resources Link
 
 
-### API 
-|           |           |                                                   |
-| --------  | --------  | ----------------------------------------------    |
+| API       |           |                                               |    
+| --------  | --------  | ----------------------------------------------    
 | 1.        | Kehamilan | (https://www.halodoc.com/kesehatan/trimester-1) (https://www.halodoc.com/kesehatan/trimester-2) (https://www.halodoc.com/kesehatan/trimester-3) 
 | 2.        | Pola Asuh | https://parent-9fc99-default-rtdb.asia-southeast1.firebasedatabase.app/.json |
-| 3.        | Register dan Login | https://firebase.google.com/ (Authentication) |
-| 4.        | Live Chat | https://firebase.google.com/ (Firestore)  |
-
-
-### Library
-|           |           |                                                   |
-| --------  | --------  | ----------------------------------------------    |
-| 1.        | Axios     | https://axios-http.com/                           |
-| 2.        | Moment JS | https://momentjs.com/                             |
+| 3.        | Register dan Login | https://firebase.google.com/ (Authentication) 
+| 4.        | Live Chat | https://firebase.google.com/ (Firestore)  
 
 
 
-### Framework
-|           |           |                                                   |
-| --------  | --------  | ----------------------------------------------    |
-| 1.        | React JS  | https://reactjs.org/                           |
-| 2.        | React Bootstrap | https://react-bootstrap.github.io/                             |
-| 3.        | Bootstrap | https://getbootstrap.com/                             |
+|  Library  |           |                                                |   
+| --------  | --------  | ----------------------------------------------    
+| 1.        | Axios     | https://axios-http.com/                           
+| 2.        | Moment JS | https://momentjs.com/                             
 
 
-### Assets
-|           |           |                                                   |
-| --------  | --------  | ----------------------------------------------    |
-| 1.        | Freepik   | https://reactjs.org/                              |
-| 2.        | Flaticon  | https://www.flaticon.com/                         |
+
+| Framework |           |                                               |  
+| --------  | --------  | ----------------------------------------------    
+| 1.        | React JS  | https://reactjs.org/                           
+| 2.        | React Bootstrap | https://react-bootstrap.github.io/       
+| 3.        | Bootstrap | https://getbootstrap.com/                             
 
 
-### Font 
-|           |           |                                                   |
-| --------  | --------  | ----------------------------------------------    |
+|  Assets   |           |                                               |   
+| --------  | --------  | ----------------------------------------------    
+| 1.        | Freepik   | https://reactjs.org/                              
+| 2.        | Flaticon  | https://www.flaticon.com/                         
+
+
+|  Font     |           |                                                 |    
+| --------  | --------  | ----------------------------------------------    
 | 1.        | Google Font | https://fonts.google.com/ 
 
 
