@@ -5,9 +5,11 @@ import { AiOutlineUser } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import userImg from "../../../assets/profile-user.png";
 import { auth } from "../../../config/firebase";
-import iconPremium from "../../../assets/premium.jpeg"
+import iconPremium from "../../../assets/premium.jpeg";
+import { useEffect } from "react";
 
 export default function ButtonSigIn({
+  toggleValue,
   setMobile,
   setDropdownUser,
   dropdownUser,
@@ -30,6 +32,11 @@ export default function ButtonSigIn({
         setDropdownUser(false);
       });
   };
+  useEffect(() => {
+    if (toggleValue === false) {
+      setDropdownUser(toggleValue);
+    }
+  }, [toggleValue, setDropdownUser]);
 
   return (
     <>
@@ -70,9 +77,14 @@ export default function ButtonSigIn({
         </div>
 
         <ul className="dropdown-item_list">
-          <li>
-            <img className="list-user-icon" src={iconPremium} alt="" /> Konsultasi
-            {/* <RiCustomerService2Line className="list-user-icon" /> Chat Admin */}
+          <li
+            onClick={() => {
+              navigate("/consultation");
+              setDropdownUser(false);
+            }}
+          >
+            <img className="list-user-icon" src={iconPremium} alt="" />{" "}
+            Konsultasi
           </li>
           <li onClick={handleLogout}>
             <BiLogOut className="list-user-icon" /> Keluar

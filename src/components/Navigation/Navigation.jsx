@@ -14,7 +14,6 @@ const Navigation = () => {
     setMobile(!isMobile);
     setDropdownUser(false);
   };
-  
 
   return (
     <nav className="navigationBar">
@@ -33,32 +32,75 @@ const Navigation = () => {
           isMobile ? "navbar-links navbar-links__mobile" : "navbar-links"
         }
       >
-        <li onClick={() => setMobile(false)} className="navbar-link__item">
+        <li
+          onClick={() => {
+            setMobile(false);
+            setDropdownUser(false);
+          }}
+          className="navbar-link__item"
+        >
           <Link to="/">Home</Link>
         </li>
         <li
           onClick={() => {
             setMobile(true);
+            setDropdownUser(false);
           }}
           className="navbar-link__item"
         >
           <NavDropdown title="Kehamilan" id="basic-nav-dropdown">
-            <NavDropdown.Item> <Link to="/trimester1">Trimester 1</Link></NavDropdown.Item>
-            <NavDropdown.Item> <Link to="/trimester2">Trimester 2</Link></NavDropdown.Item>
-            <NavDropdown.Item> <Link to="/trimester3">Trimester 3</Link></NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/trimester1">Trimester 1</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/trimester2">Trimester 2</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/trimester3">Trimester 3</Link>
+            </NavDropdown.Item>
           </NavDropdown>
         </li>
-        <li onClick={() => setMobile(true)} className="navbar-link__item">
+        <li
+          onClick={() => {
+            setMobile(true);
+            setDropdownUser(false);
+          }}
+          className="navbar-link__item"
+        >
           <NavDropdown title="Pola Asuh" id="basic-nav-dropdown">
-            <NavDropdown.Item> <Link to="/ArtikelPg1">Anak dan Pola Asuh</Link></NavDropdown.Item>
-            <NavDropdown.Item> <Link to="/ArtikelPg2">Kesehatan Anak</Link></NavDropdown.Item>
-            <NavDropdown.Item> <Link to="/ArtikelPg3">Tumbuh Kembang Anak</Link></NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/ArtikelPg1">Anak dan Pola Asuh</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/ArtikelPg2">Kesehatan Anak</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              {" "}
+              <Link to="/ArtikelPg3">Tumbuh Kembang Anak</Link>
+            </NavDropdown.Item>
           </NavDropdown>
         </li>
-        <li onClick={() => setMobile(false)} className="navbar-link__item">
+        <li
+          onClick={() => {
+            setMobile(false);
+            setDropdownUser(false);
+          }}
+          className="navbar-link__item"
+        >
           <Link to="/message">Live Chat</Link>
         </li>
-        <li onClick={() => setMobile(false)} className="navbar-link__item">
+        <li
+          onClick={() => {
+            setMobile(false);
+            setDropdownUser(false);
+          }}
+          className="navbar-link__item"
+        >
           <Link to="/about">About</Link>
         </li>
       </ul>

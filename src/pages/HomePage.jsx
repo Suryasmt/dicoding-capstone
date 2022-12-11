@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "../components/Footer";
 import Content from "../components/HomeItem/Content";
 import Navigation from "../components/Navigation/Navigation";
@@ -6,7 +7,7 @@ const HomePage = () => {
   return (
     <>
       <Navigation />
-      <main>
+      <main >
         <Content />
       </main>
       <footer>

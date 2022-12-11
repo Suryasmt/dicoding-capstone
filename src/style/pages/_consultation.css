@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto:wght@300;400&family=Rubik+Vinyl&display=swap');
+
+.consultation-page {
+    height: 89.28vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box-page-consultation {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 40px 0;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    gap: 20px;
+}
+
+.item-consultation__title {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   gap: 15px;
+   padding: 10px;
+}
+
+.item-consultation__title h1 {
+    color: var(--primary);
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.item-consultation__title small{
+    margin: auto;
+    display: flex;
+    text-align: center; 
+    justify-content: center; 
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--white);
+    color: var(--primary);
+    padding: 0 10px;
+}
+
+.item-consultation__body {
+    width: 95%;
+    margin: auto;
+    min-height: 100px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'construction-title consultation-images'
+    'construction-icon consultation-images';
+    gap: 20px;
+}
+
+.item-consultation__body h2 {
+    padding: 10px;
+    border-radius: 20px;
+    grid-area: construction-title;
+    font-size: 23px;
+    color: var(--grey);
+    font-weight: bold;
+    font-family: 'Oswald' sans-serif;
+    text-align: center;
+    margin: auto;
+    box-shadow: var(--box-shadow);
+}
+
+.item-consultation__body .construction-icon {
+    grid-area: construction-icon;
+    width: 50%;
+    margin: auto;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.construction-icon__tools {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    color: var(--grey);
+}
+
+.consultation-page__images {
+    grid-area: consultation-images;
+    width: 80%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'image-consul-2 image-consul-2'
+    'image-consul-1 image-consul-3';
+    gap: 10px;
+    align-items: center;
+}
+.image-consul-1{
+    grid-area: image-consul-1;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.image-consul-2{
+    grid-area: image-consul-2;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.image-consul-3{
+    grid-area: image-consul-3;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.btn-home-consultation {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: var(--primary);
+    border: none;
+    color: var(--white);
+}
+.btn-home-consultation:hover {
+    box-shadow: var(--box-shadow);
+}
+
+
+@media screen and (max-width: 980px) {
+    .item-consultation__body h2 {
+        font-size: 20px;
+    }
+    .btn-home-consultation {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 848px) {
+    .item-consultation__title h1 {
+        font-size: 30px;
+    }
+    .item-consultation__body h2 {
+        font-size: 14px;
+    }
+    .item-consultation__title small {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .item-consultation__body {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .consultation-page__images {
+        display: none;
+    }
+
+    .construction-icon__tools {
+        width: 60%;
+        height: 60%;
+    }
+    .consultation-page__images {
+        width: 60%;
+        margin: 50px 0;
+    }
+}

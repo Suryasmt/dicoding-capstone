@@ -7,6 +7,7 @@
 @import './pages/_authentication.css';
 @import './pages/KehamilanPage/trimester1.css';
 @import './pages/_room-chat.css';
+@import './pages/_consultation.css';
 
 @import './components/footer.css';
 @import './components/artikel.css';
