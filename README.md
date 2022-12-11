@@ -2,6 +2,7 @@
 **Smart Parents** adalah website penyedia informasi seputar keluarga khususnya kehamilan dan pola asuh.
 Kami berkomitmen dan berusaha untuk memberikan beragam informasi yang menarik dan up to date sehingga dapat menambah wawasan bagi ibu hamil dan keluarga. 
 
+
 ## Fitur
 ![fitur2](https://user-images.githubusercontent.com/110590829/206923071-734d8aa1-4f17-46b9-b44d-7e208c26f013.png)
 
@@ -16,6 +17,7 @@ Kami berkomitmen dan berusaha untuk memberikan beragam informasi yang menarik da
 4. ### Tools
    ![tools-capstone](https://user-images.githubusercontent.com/110590829/206924042-5bfe7632-0f60-4119-9c7c-f3b00094695b.png)
 
+
 ## Deployed Link
 Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://smart-parents-c22109.netlify.app/)
 
@@ -29,6 +31,7 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 | 2.        | Pola Asuh | https://parent-9fc99-default-rtdb.asia-southeast1.firebasedatabase.app/.json |
 | 3.        | Register dan Login | https://firebase.google.com/ (Authentication) |
 | 4.        | Live Chat | https://firebase.google.com/ (Firestore)  |
+
 
 ### Library
 |           |           |                                                   |
@@ -51,6 +54,7 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 | --------  | --------  | ----------------------------------------------    |
 | 1.        | Freepik   | https://reactjs.org/                              |
 | 2.        | Flaticon  | https://www.flaticon.com/                         |
+
 
 ### Font 
 |           |           |                                                   |
