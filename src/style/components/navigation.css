@@ -135,7 +135,7 @@
 }
 
 .dropdown-item_list li:hover {
-    box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0px 9px 0 rgba(0,0,0,0.2);
 }
 
 .list-user-icon {

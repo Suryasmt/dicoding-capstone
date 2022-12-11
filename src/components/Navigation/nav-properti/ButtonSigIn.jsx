@@ -2,10 +2,10 @@ import { BiLogOut } from "@react-icons/all-files/bi/BiLogOut";
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineUser } from "react-icons/ai";
-import { RiCustomerService2Line } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import userImg from "../../../assets/profile-user.png";
 import { auth } from "../../../config/firebase";
+import iconPremium from "../../../assets/premium.jpeg"
 
 export default function ButtonSigIn({
   setMobile,
@@ -71,7 +71,8 @@ export default function ButtonSigIn({
 
         <ul className="dropdown-item_list">
           <li>
-            <RiCustomerService2Line className="list-user-icon" /> Chat Admin
+            <img className="list-user-icon" src={iconPremium} alt="" /> Konsultasi
+            {/* <RiCustomerService2Line className="list-user-icon" /> Chat Admin */}
           </li>
           <li onClick={handleLogout}>
             <BiLogOut className="list-user-icon" /> Keluar

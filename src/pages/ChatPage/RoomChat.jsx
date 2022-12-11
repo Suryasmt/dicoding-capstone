@@ -21,6 +21,7 @@ export default function RoomChat() {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const [message, setMessage] = useState([]);
+  const [isGetMessage, setGetMessage] = useState("");
 
   const scrollToBottomMsg = () => {
     let docHack = document.body.scrollHeight;
@@ -29,9 +30,9 @@ export default function RoomChat() {
 
   const handleMessage = (e) => {
     e.preventDefault();
-    let getMessage = e.target.message.value;
+    
 
-    if (!getMessage) {
+    if (!isGetMessage) {
       return;
     }
 
@@ -41,7 +42,7 @@ export default function RoomChat() {
 
     setDoc(messageRef, {
       id: getIdDoc,
-      message: getMessage,
+      message: isGetMessage,
       createdAt: Date.now(),
       user: {
         id: user.uid,
@@ -68,10 +69,10 @@ export default function RoomChat() {
 
   // component did mount
   useEffect(() => {
-    if(!user) {
-      navigate('/login')
+    if (!user) {
+      navigate("/login");
     }
-    
+
     const messageTrigger = () => {
       let messageRef = collection(dbStore, "message");
 
@@ -166,7 +167,14 @@ export default function RoomChat() {
         </div>
 
         <form onSubmit={handleMessage} className="form-message">
-          <input type="text" id="message" placeholder="Tulis Pesan..." />
+          <input
+            onChange={(e) => {
+              setGetMessage(e.target.value);
+            }}
+            type="text"
+            id="message"
+            placeholder="Tulis Pesan..."
+          />
           <button type="submit">
             <IoMdSend className="icon-btn-message" />
           </button>

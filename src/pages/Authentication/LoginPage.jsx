@@ -15,14 +15,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginPage = () => {
   const [errorSignIn, setErrorSignIn] = useState(false);
-  const [user] = useAuthState(auth)
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
   const handleEmailPasswordLogin = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
 
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
@@ -44,13 +43,19 @@ const LoginPage = () => {
         console.info(err);
       });
   };
-
-  useEffect(() => {
-    if (user) {
+  function UserNavigateHome() {
+    if (user !== null) {
       navigate("/");
     }
+  }
+  useEffect(() => {
+    return () => {
+      UserNavigateHome();
+    };
   });
-  
+
+  console.log(user);
+
   return (
     <div className="container-login">
       <div className="back-to-home">
@@ -65,12 +70,19 @@ const LoginPage = () => {
           <img src={logoImage} alt="" />
         </div>
         <h1 className="login-title">Masuk</h1>
-        <form onSubmit={handleEmailPasswordLogin} autoComplete="off" autoSave="off">
+        <form
+          onSubmit={handleEmailPasswordLogin}
+          autoComplete="off"
+          autoSave="off"
+        >
           <div className="form-group">
             <label className="mb-2" htmlFor="email">
               Email
             </label>
             <input
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               type="email"
               id="email"
               placeholder="Masukan Email"
@@ -82,6 +94,9 @@ const LoginPage = () => {
               Password
             </label>
             <input
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               type="password"
               id="password"
               placeholder="Masukan Password"
