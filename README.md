@@ -24,7 +24,7 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 ## Other Resources Link
 
 
-| API       |           |                                               |    
+| No        | API       |                                               |    
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Kehamilan | (https://www.halodoc.com/kesehatan/trimester-1) (https://www.halodoc.com/kesehatan/trimester-2) (https://www.halodoc.com/kesehatan/trimester-3) 
 | 2.        | Pola Asuh | https://parent-9fc99-default-rtdb.asia-southeast1.firebasedatabase.app/.json |
@@ -33,27 +33,27 @@ Untuk priview website ini dapat kunjungi link berikut : [Smart Parents](https://
 
 
 
-|  Library  |           |                                                |   
+| No        |  Library  |                                                |   
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Axios     | https://axios-http.com/                           
 | 2.        | Moment JS | https://momentjs.com/                             
 
 
 
-| Framework |           |                                               |  
+| No        | Framework |                                               |  
 | --------  | --------  | ----------------------------------------------    
 | 1.        | React JS  | https://reactjs.org/                           
 | 2.        | React Bootstrap | https://react-bootstrap.github.io/       
 | 3.        | Bootstrap | https://getbootstrap.com/                             
 
 
-|  Assets   |           |                                               |   
+| No        | Assets    |                                               |   
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Freepik   | https://reactjs.org/                              
 | 2.        | Flaticon  | https://www.flaticon.com/                         
 
 
-|  Font     |           |                                                 |    
+| No       | Font     |                                                 |    
 | --------  | --------  | ----------------------------------------------    
 | 1.        | Google Font | https://fonts.google.com/ 
 
