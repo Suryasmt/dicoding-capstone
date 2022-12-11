@@ -1,7 +1,11 @@
-#Screenshoot
-1. Halaman Register dan Login
+## Screenshoot
+# 1. Halaman Register dan Login
 ![loginpage](https://user-images.githubusercontent.com/110590829/206920703-9aaaa25f-54ab-4838-b5d9-95d2b06bc47a.png)
-
+![register-page](https://user-images.githubusercontent.com/110590829/206920981-c6c84631-c8a1-4bc8-b634-dc1753ae6d12.png)
+# 2. Halaman Home
+![home-page](https://user-images.githubusercontent.com/110590829/206921190-71ec9775-898d-41ad-8ff3-658a655fcc79.png)
+# 3. Halaman About
+![about-page](https://user-images.githubusercontent.com/110590829/206921259-24edecff-de64-4e6e-80d1-4d2d42201727.png)
 
 
 
