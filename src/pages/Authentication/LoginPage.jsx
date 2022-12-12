@@ -54,7 +54,6 @@ const LoginPage = () => {
     };
   });
 
-  console.log(user);
 
   return (
     <div className="container-login">
